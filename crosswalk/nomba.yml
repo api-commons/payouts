@@ -1,0 +1,21 @@
+provider: nomba
+apis_io: https://apis.io/providers/nomba/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - transfer
+    properties:
+      status: status
+      amount:
+      - sourceAmount
+      - amount
+      created_at: createdAt
+      currency: sourceCurrency
+      method: paymentMethod
+      beneficiary_id: recipient
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/nomba-global-payout-openapi.yml#GET /v1/global-payout/transfer/{transactionId}
+    - openapi/_original/nomba-global-payout-openapi.yml#POST /v1/global-payout/transfer

@@ -1,0 +1,30 @@
+provider: fipto
+apis_io: https://apis.io/providers/fipto/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties:
+      id: id
+      entity_type: type
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/fipto-customer-api-openapi.json#DELETE /companies/{company_id}/beneficiaries/{beneficiary_id}
+    - openapi/_original/fipto-customer-api-openapi.json#GET /companies/{company_id}/aisp-pisp/beneficiaries
+    - openapi/_original/fipto-customer-api-openapi.json#GET /companies/{company_id}/aisp-pisp/beneficiaries/{beneficiary_id}
+    - openapi/_original/fipto-customer-api-openapi.json#GET /companies/{company_id}/beneficiaries
+    - openapi/_original/fipto-customer-api-openapi.json#GET /companies/{company_id}/beneficiaries/{beneficiary_id}
+  payout:
+    path_segment:
+    - payouts
+    properties:
+      method: type
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fipto-customer-api-openapi.json#POST /companies/{company_id}/aisp-pisp/wallets/{wallet_id}/payouts
+    - openapi/_original/fipto-customer-api-openapi.json#POST /companies/{company_id}/wallets/{wallet_id}/payouts
+    - openapi/_original/fipto-customer-api-openapi.yml#POST /companies/{company_id}/aisp-pisp/wallets/{wallet_id}/payouts
+    - openapi/_original/fipto-customer-api-openapi.yml#POST /companies/{company_id}/wallets/{wallet_id}/payouts

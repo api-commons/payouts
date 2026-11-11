@@ -1,0 +1,48 @@
+aid: common-payouts
+name: Payouts and Cross-Border Payments
+type: Common
+description: 'The common Payouts and Cross-Border Payments vocabulary, distilled from the harvested OpenAPI of 100
+  providers in APIs.io: shared operations, JSON Schema per concept with measured adoption, and a crosswalk from
+  the common names to each provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Payouts
+- Cross-Border Payments
+- Remittances
+- Mass Payouts
+- Common Schema
+created: '2026-11-11'
+modified: '2026-11-11'
+url: https://raw.githubusercontent.com/api-commons/payouts/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-payouts:payouts
+  name: Common Payouts and Cross-Border Payments Interface
+  description: The Payouts and Cross-Border Payments interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/payouts
+  tags:
+  - Payouts
+  - Cross-Border Payments
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/payouts/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/payouts/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/payouts/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: beneficiary
+    url: https://raw.githubusercontent.com/api-commons/payouts/main/schema/beneficiary.json
+  - type: JSONSchema
+    name: payout
+    url: https://raw.githubusercontent.com/api-commons/payouts/main/schema/payout.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/payouts/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

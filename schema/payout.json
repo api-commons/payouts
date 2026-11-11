@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/payouts/main/schema/payout.json",
+  "title": "Payout",
+  "description": "The common payout in Payouts and Cross-Border Payments, distilled from 53 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.717,
+      "x-commons-providers": 38,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "transferStatus",
+        "Status"
+      ]
+    },
+    "amount": {
+      "type": "number",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.679,
+      "x-commons-providers": 36,
+      "x-commons-spellings": [
+        "amount",
+        "sourceAmount",
+        "Amount",
+        " sourceAmount:",
+        "source_amount",
+        "payoutAmount"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.66,
+      "x-commons-providers": 35,
+      "x-commons-spellings": [
+        "id",
+        "transfer_id",
+        "external_id",
+        "uuid",
+        "payoutId",
+        "transferId",
+        "externalId",
+        "payout_id"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.528,
+      "x-commons-providers": 28,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "createdDate",
+        "created_date",
+        "createTime",
+        "create_time",
+        "CreatedAt"
+      ],
+      "format": "date-time"
+    },
+    "currency": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.415,
+      "x-commons-providers": 22,
+      "x-commons-spellings": [
+        "currency",
+        "sourceCurrency",
+        "currency_code",
+        "source_currency"
+      ]
+    },
+    "reference": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.396,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "description",
+        "reference",
+        "memo",
+        "reason",
+        "paymentReference"
+      ]
+    },
+    "method": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.302,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "type",
+        "paymentMethod",
+        "payment_method",
+        "rail",
+        "payout_method",
+        "method",
+        "PaymentMethod"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.302,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updateTime",
+        "updated"
+      ],
+      "format": "date-time"
+    },
+    "beneficiary_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.283,
+      "x-commons-providers": 15,
+      "x-commons-spellings": [
+        "destination",
+        "recipient",
+        "beneficiary",
+        "recipientId",
+        "beneficiaryId",
+        "payeeId",
+        "beneficiary_id"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "payouts",
+    "concept": "payout",
+    "providers": 53,
+    "generated": "2026-11-11",
+    "version": "0.1.0-draft.20261111",
+    "status": "draft"
+  }
+}

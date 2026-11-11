@@ -1,0 +1,14 @@
+provider: cybersource
+apis_io: https://apis.io/providers/cybersource/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payouts
+    properties:
+      status: status
+      id: id
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/openapi.json#POST /pts/v2/payouts

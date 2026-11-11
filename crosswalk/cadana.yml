@@ -1,0 +1,49 @@
+provider: cadana
+apis_io: https://apis.io/providers/cadana/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties:
+      id: id
+      name: name
+      email: email
+      currency: currency
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cadana-embedded-consumer-wallets-openapi.yaml#DELETE /v1/users/{userId}/beneficiaries/{beneficiaryId}
+    - openapi/_original/cadana-embedded-consumer-wallets-openapi.yaml#GET /v1/users/{userId}/beneficiaries
+    - openapi/_original/cadana-embedded-consumer-wallets-openapi.yaml#GET /v1/users/{userId}/beneficiaries/{beneficiaryId}
+    - openapi/_original/cadana-embedded-consumer-wallets-openapi.yaml#POST /v1/users/{userId}/beneficiaries
+    - openapi/_original/cadana-embedded-payments-openapi.yaml#DELETE /v1/beneficiaries/{beneficiaryId}
+  payout:
+    path_segment:
+    - payouts
+    - remittances
+    - disbursements
+    - transfers
+    properties:
+      status: status
+      amount:
+      - amount
+      - sourceAmount
+      id: id
+      created_at: createdAt
+      reference:
+      - reference
+      - paymentReference
+      - description
+      method:
+      - paymentMethod
+      - type
+      updated_at: updatedAt
+      beneficiary_id: beneficiaryId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/cadana-embedded-payments-openapi.yaml#GET /v1/payouts
+    - openapi/_original/cadana-embedded-payments-openapi.yaml#GET /v1/payouts/{payoutId}
+    - openapi/_original/cadana-embedded-payments-openapi.yaml#POST /v1/payouts
+    - openapi/_original/cadana-statutory-compliance-openapi.yaml#GET /v1/statutory/remittances
+    - openapi/_original/cadana-statutory-compliance-openapi.yaml#GET /v1/statutory/remittances/{remittance_id}

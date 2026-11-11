@@ -1,0 +1,23 @@
+provider: bridge
+apis_io: https://apis.io/providers/bridge/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - transfers
+    properties:
+      status: state
+      amount: amount
+      id: id
+      created_at: created_at
+      currency: currency
+      updated_at: updated_at
+      beneficiary_id: destination
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/bridge-openapi-original.json#DELETE /transfers/{transferID}
+    - openapi/_original/bridge-openapi-original.json#GET /customers/{customerID}/transfers
+    - openapi/_original/bridge-openapi-original.json#GET /transfers
+    - openapi/_original/bridge-openapi-original.json#GET /transfers/{transferID}
+    - openapi/_original/bridge-openapi-original.json#POST /transfers

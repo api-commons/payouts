@@ -1,0 +1,181 @@
+openapi: 3.1.0
+info:
+  title: Payouts and Cross-Border Payments (API Commons)
+  version: 0.1.0-draft.20261111
+  description: 'The common Payouts and Cross-Border Payments interface, distilled from the harvested OpenAPI of
+    100 providers in the APIs.io catalog. Not a product: no one serves this API. It is the shape the market already
+    shares, measured, so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /beneficiaries:
+    get:
+      operationId: listBeneficiaries
+      summary: List beneficiaries
+      tags:
+      - Beneficiaries
+      x-commons-tier: core
+      x-commons-share: 0.852
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/Beneficiary'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createBeneficiary
+      summary: Create a beneficiary
+      tags:
+      - Beneficiaries
+      x-commons-tier: core
+      x-commons-share: 0.667
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /beneficiaries/{beneficiary_id}:
+    parameters:
+    - $ref: '#/components/parameters/beneficiary_id'
+    get:
+      operationId: getBeneficiary
+      summary: Get a beneficiary
+      tags:
+      - Beneficiaries
+      x-commons-tier: core
+      x-commons-share: 0.519
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    delete:
+      operationId: deleteBeneficiary
+      summary: Delete a beneficiary
+      tags:
+      - Beneficiaries
+      x-commons-tier: extended
+      x-commons-share: 0.37
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateBeneficiary
+      summary: Update a beneficiary
+      tags:
+      - Beneficiaries
+      x-commons-tier: extended
+      x-commons-share: 0.333
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /payouts:
+    post:
+      operationId: createPayout
+      summary: Create a payout
+      tags:
+      - Payouts
+      x-commons-tier: core
+      x-commons-share: 0.782
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id002
+                $ref: '#/components/schemas/Payout'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+    get:
+      operationId: listPayouts
+      summary: List payouts
+      tags:
+      - Payouts
+      x-commons-tier: core
+      x-commons-share: 0.564
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id002
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /payouts/{payout_id}:
+    parameters:
+    - $ref: '#/components/parameters/payout_id'
+    get:
+      operationId: getPayout
+      summary: Get a payout
+      tags:
+      - Payouts
+      x-commons-tier: core
+      x-commons-share: 0.636
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+components:
+  schemas:
+    Beneficiary:
+      $ref: ./schema/beneficiary.json
+    Payout:
+      $ref: ./schema/payout.json
+  parameters:
+    beneficiary_id:
+      name: beneficiary_id
+      in: path
+      required: true
+      schema:
+        type: string
+    payout_id:
+      name: payout_id
+      in: path
+      required: true
+      schema:
+        type: string

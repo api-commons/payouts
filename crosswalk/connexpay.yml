@@ -1,0 +1,32 @@
+provider: connexpay
+apis_io: https://apis.io/providers/connexpay/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - payees
+    properties:
+      status:
+      - state
+      - status
+      email: email
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/connexpay-push-to-card-openapi.yml#GET /api/v1/PushToCard/Payees
+    - openapi/_original/connexpay-push-to-card-openapi.yml#PATCH /api/v1/PushToCard/Payees/{payeeGuid}
+    - openapi/_original/connexpay-push-to-card-openapi.yml#POST /api/v1/PushToCard/Payees
+  payout:
+    path_segment:
+    - payouts
+    - transfer
+    properties:
+      status: status
+      amount: Amount
+      created_at: createdDate
+      reference: memo
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/connexpay-push-to-card-openapi.yml#GET /api/v1/PushToCard/Payouts/{payoutGuid}
+    - openapi/_original/connexpay-push-to-card-openapi.yml#POST /api/v1/PushToCard/Payouts
+    - openapi/_original/connexpay-sales-openapi.yml#POST /api/v1/MerchantFlexFunding/Funds/Transfer

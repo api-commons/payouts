@@ -1,0 +1,15 @@
+provider: euronet
+apis_io: https://apis.io/providers/euronet/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - recipients
+    properties:
+      currency: currencyCode
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/xe-payments-api-openapi.json#DELETE /recipients/{recipientId}
+    - openapi/_original/xe-payments-api-openapi.json#GET /recipients
+    - openapi/_original/xe-payments-api-openapi.json#POST /recipients

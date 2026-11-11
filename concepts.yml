@@ -1,0 +1,48 @@
+context: payouts
+name: Payouts and Cross-Border Payments
+intro: >-
+  The common payout vocabulary -- the recipients or beneficiaries paid, their bank accounts, and the
+  payouts or transfers sent to them -- distilled from the APIs that already exist.
+tags: [Payouts, Cross-Border Payments, Remittances, Mass Payouts, International Payments, Money Transfer, Disbursements]
+
+envelope: [_links, _pagination, _results, data, success, errors, count, total, page, meta, links, result, results,
+           value, next, previous, has_more, message, page_info, cursor, total_count, per_page, total_pages, object]
+
+common_fields:
+  id: [uuid, guid, external_id, payout_id, transfer_id, beneficiary_id, recipient_id]
+  created_at: [created, created_date, create_time, creation_date, created_on]
+  updated_at: [updated, modified_at, update_time]
+  status: [state, transfer_status, payout_status]
+  metadata: [meta_data, custom_fields]
+
+concepts:
+  beneficiary:
+    segments: [beneficiaries, beneficiary, recipients, recipient, payees, payee, counterparties, contacts@payouts|transfers]
+    aliases:
+      name: [full_name, account_holder_name, beneficiary_name, account_name, legal_name]
+      country: [country_code, bank_country, beneficiary_country]
+      currency: [currency_code]
+      entity_type: [type, beneficiary_entity_type, legal_entity_type, recipient_type]
+      email: [email_address]
+  payout:
+    segments: [payouts, payout, transfers, transfer, disbursements, remittances, payments@payouts|transfers|beneficiaries]
+    aliases:
+      amount: [source_amount, send_amount, payout_amount, value]
+      currency: [source_currency, currency_code, send_currency]
+      beneficiary_id: [recipient_id, recipient, beneficiary, payee_id, destination]
+      reference: [description, memo, payment_reference, reason]
+      method: [payment_method, payout_method, rail, type]
+
+findings:
+  - >-
+    Payouts agree on status, amount, id and created_at; currency reaches 42% and the reference 40%,
+    because single-currency providers leave the currency implicit.
+  - >-
+    Beneficiaries agree only on id: entity_type, name and status each reach 42%, and the bank details
+    are a country-specific object (IBAN, sort code, routing number, CLABE) at every provider.
+decisions:
+  - >-
+    beneficiary is the market word for the party paid (over recipient and payee) in cross-border
+    payments, and it does not collide with a concept in another context.
+  - >-
+    Bank details are left as an object: their fields are set by each country's clearing system, not by the providers.

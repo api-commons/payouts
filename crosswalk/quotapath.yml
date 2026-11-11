@@ -1,0 +1,13 @@
+provider: quotapath
+apis_io: https://apis.io/providers/quotapath/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payout
+    properties:
+      id: id
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/quotapath-openapi-original.json#GET /payout/

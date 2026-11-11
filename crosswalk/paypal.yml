@@ -1,0 +1,14 @@
+provider: paypal
+apis_io: https://apis.io/providers/paypal/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payouts
+    properties:
+      amount: amount
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/paypal-payouts-openapi-original.yml#GET /v1/payments/payouts/{id}
+    - openapi/_original/paypal-payouts-openapi-original.yml#POST /v1/payments/payouts

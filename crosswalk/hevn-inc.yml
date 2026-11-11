@@ -1,0 +1,19 @@
+provider: hevn-inc
+apis_io: https://apis.io/providers/hevn-inc/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - transfer
+    - transfers
+    properties:
+      amount: amount
+      reference: memo
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/apps/transfers
+    - openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/auth/mcp/transfers
+    - openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/mcp/transfers
+    - openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/apps/transfer
+    - openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/apps/{app_id}/transfer

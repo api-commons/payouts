@@ -1,0 +1,24 @@
+provider: finix
+apis_io: https://apis.io/providers/finix/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - transfers
+    properties:
+      status: state
+      amount: amount
+      id: id
+      created_at: created_at
+      currency: currency
+      method: type
+      updated_at: updated_at
+      beneficiary_id: destination
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/finix-openapi-original.yml#DELETE /settlements/{settlement_id}/transfers
+    - openapi/_original/finix-openapi-original.yml#GET /settlements/{settlement_id}/transfers
+    - openapi/_original/finix-openapi-original.yml#GET /transfers
+    - openapi/_original/finix-openapi-original.yml#GET /transfers/{transfer_id}
+    - openapi/_original/finix-openapi-original.yml#POST /transfers

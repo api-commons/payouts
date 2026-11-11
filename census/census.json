@@ -1,0 +1,4031 @@
+{
+ "cohort_size": 100,
+ "unreadable": [],
+ "concepts": {
+  "beneficiary": {
+   "airwallex": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/airwallex-openapi.yml#GET /api/v1/beneficiaries",
+     "openapi/_original/airwallex-openapi.yml#GET /api/v1/beneficiaries/{id}"
+    ]
+   },
+   "augustus": {
+    "segments": [
+     "counterparties"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "status": "string",
+     "id": "string",
+     "type": "string",
+     "name": "string",
+     "entity_type": "string",
+     "physical_address": "object",
+     "financial_address": null,
+     "date_of_birth": "string",
+     "phone": "string",
+     "email": "string",
+     "legal_id": "string",
+     "is_self_owned": "boolean",
+     "blocked": "boolean",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/augustus-openapi.json#GET /v1/counterparties",
+     "openapi/_original/augustus-openapi.json#GET /v1/counterparties/{id}",
+     "openapi/_original/augustus-openapi.json#POST /v1/counterparties",
+     "openapi/_original/augustus-openapi.json#POST /v1/counterparties/{id}"
+    ]
+   },
+   "aza-finance": {
+    "segments": [
+     "recipients"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "PATCH item"
+    ],
+    "properties": {
+     "requested_amount": "number",
+     "requested_currency": "string",
+     "payout_method": "object",
+     "metadata": "object",
+     "created_at": "string",
+     "editable": "boolean",
+     "retriable": "boolean",
+     "input_usd_amount": "number",
+     "may_cancel": "boolean",
+     "state_reason": "string",
+     "state_reason_details": null,
+     "state": "string",
+     "transaction_id": "string",
+     "transaction_external_id": "string",
+     "transaction_state": "string",
+     "exchange_rate": "number",
+     "fee_fractional": "number",
+     "input_amount": "number",
+     "input_currency": "string",
+     "output_amount": "number",
+     "output_currency": "string",
+     "id": "string",
+     "type": "string",
+     "errors": null,
+     "mandate_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/aza-finance-openapi-original.json#DELETE /recipients/{Recipient ID}",
+     "openapi/_original/aza-finance-openapi-original.json#GET /recipients",
+     "openapi/_original/aza-finance-openapi-original.json#PATCH /recipients/{Recipient ID}"
+    ]
+   },
+   "cadana": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "name": "string",
+     "email": "string",
+     "countryCode": "string",
+     "currency": "string",
+     "paymentDetails": "object",
+     "id": "string",
+     "createdTimestamp": "integer",
+     "lastUpdatedTimestamp": "integer",
+     "kyc": "object"
+    },
+    "evidence": [
+     "openapi/_original/cadana-embedded-consumer-wallets-openapi.yaml#DELETE /v1/users/{userId}/beneficiaries/{beneficiaryId}",
+     "openapi/_original/cadana-embedded-consumer-wallets-openapi.yaml#GET /v1/users/{userId}/beneficiaries",
+     "openapi/_original/cadana-embedded-consumer-wallets-openapi.yaml#GET /v1/users/{userId}/beneficiaries/{beneficiaryId}",
+     "openapi/_original/cadana-embedded-consumer-wallets-openapi.yaml#POST /v1/users/{userId}/beneficiaries",
+     "openapi/_original/cadana-embedded-payments-openapi.yaml#DELETE /v1/beneficiaries/{beneficiaryId}",
+     "openapi/_original/cadana-embedded-payments-openapi.yaml#GET /v1/beneficiaries",
+     "openapi/_original/cadana-embedded-payments-openapi.yaml#GET /v1/beneficiaries/{beneficiaryId}",
+     "openapi/_original/cadana-embedded-payments-openapi.yaml#POST /v1/beneficiaries"
+    ]
+   },
+   "caliza": {
+    "segments": [
+     "beneficiaries",
+     "recipients"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "totalElements": "integer",
+     "totalPages": "integer",
+     "first": "boolean",
+     "last": "boolean",
+     "size": "integer",
+     "content": "array",
+     "number": "integer",
+     "sort": "object",
+     "numberOfElements": "integer",
+     "pageable": "object",
+     "empty": "boolean",
+     "id": "string",
+     "integratorId": "string",
+     "integratorBeneficiaryId": "string",
+     "type": "string",
+     "person": "object",
+     "business": "object",
+     "localTargetBankAccount": "object",
+     "files": "array",
+     "active": "boolean",
+     "kycVerified": "boolean",
+     "status": "string",
+     "termsAndConditions": "boolean",
+     "hasValidPixKey": "boolean",
+     "createdDate": "string",
+     "riskScore": "object",
+     "beneficiaryLifeCycle": "array",
+     "localCalizaOwnedBankAccountId": "string",
+     "beneficiaryId": "string",
+     "individualName": "string",
+     "businessName": "string",
+     "currency": "string",
+     "internalTransfer": "boolean",
+     "countryOfIncorporation": "string",
+     "contactId": "string",
+     "belongsToBeneficiary": "boolean",
+     "details": "object"
+    },
+    "evidence": [
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#DELETE /v1/beneficiaries/{beneficiaryId}",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#DELETE /v1/recipients/{id}",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#GET /v1/beneficiaries",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#GET /v1/beneficiaries/{beneficiaryId}",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#GET /v1/recipients",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#GET /v1/recipients/{id}",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#POST /v1/beneficiaries",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#POST /v1/recipients",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#PUT /v1/beneficiaries/{beneficiaryId}",
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#PUT /v1/recipients/{id}"
+    ]
+   },
+   "cashfree": {
+    "segments": [
+     "beneficiary"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "beneficiary_id": "string",
+     "beneficiary_name": "string",
+     "beneficiary_instrument_details": "object",
+     "beneficiary_contact_details": "object",
+     "beneficiary_status": "string",
+     "added_on": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi-payouts.json#DELETE /beneficiary",
+     "openapi/_original/openapi-payouts.json#GET /beneficiary",
+     "openapi/_original/openapi-payouts.json#POST /beneficiary"
+    ]
+   },
+   "chimoney": {
+    "segments": [
+     "beneficiary"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "accountNumber": "string",
+     "bankCurrency": "object",
+     "channel": "string",
+     "createdDate": "string",
+     "subAccount": "string",
+     "beneficiaryData": "object"
+    },
+    "evidence": [
+     "openapi/_original/chimoney-openapi.json#GET /v0.2.4/beneficiary",
+     "openapi/_original/chimoney-openapi.json#POST /v0.2.4/beneficiary"
+    ]
+   },
+   "coinflow": {
+    "segments": [
+     "recipient"
+    ],
+    "operations": [
+     "DELETE collection",
+     "POST collection"
+    ],
+    "properties": {
+     "recipient": "string"
+    },
+    "evidence": [
+     "openapi/_original/coinflow-openapi-original.json#DELETE /seller/usdc-withdraw/recipient",
+     "openapi/_original/coinflow-openapi-original.json#POST /seller/usdc-withdraw/recipient"
+    ]
+   },
+   "connexpay": {
+    "segments": [
+     "payees"
+    ],
+    "operations": [
+     "GET collection",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "payeeGuid": "string",
+     "merchantGuid": "string",
+     "firstName": "string",
+     "lastName": "string",
+     "email": "string",
+     "address1": "string",
+     "address2": "string",
+     "city": "string",
+     "state": "string",
+     "zipCode": "string",
+     "phone": "string",
+     "status": "string",
+     "cardId": "string"
+    },
+    "evidence": [
+     "openapi/_original/connexpay-push-to-card-openapi.yml#GET /api/v1/PushToCard/Payees",
+     "openapi/_original/connexpay-push-to-card-openapi.yml#PATCH /api/v1/PushToCard/Payees/{payeeGuid}",
+     "openapi/_original/connexpay-push-to-card-openapi.yml#POST /api/v1/PushToCard/Payees"
+    ]
+   },
+   "currencycloud": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "GET item",
+     "POST item"
+    ],
+    "properties": {
+     "id": "string",
+     "bank_account_holder_name": "string",
+     "name": "string",
+     "email": "string",
+     "payment_types": "array",
+     "beneficiary_address": "array",
+     "beneficiary_country": "string",
+     "beneficiary_entity_type": "string",
+     "beneficiary_company_name": "string",
+     "beneficiary_first_name": "string",
+     "beneficiary_last_name": "string",
+     "beneficiary_city": "string",
+     "beneficiary_postcode": "string",
+     "beneficiary_state_or_province": "string",
+     "beneficiary_date_of_birth": "string",
+     "beneficiary_identification_type": "string",
+     "beneficiary_identification_value": "string",
+     "bank_country": "string",
+     "bank_name": "string",
+     "bank_account_type": "string",
+     "currency": "string",
+     "account_number": "string",
+     "routing_code_type_1": "string",
+     "routing_code_value_1": "string",
+     "routing_code_type_2": "string",
+     "routing_code_value_2": "string",
+     "bic_swift": "string",
+     "iban": "string",
+     "default_beneficiary": "string",
+     "creator_contact_id": "string",
+     "bank_address": "array",
+     "created_at": "string",
+     "updated_at": "string",
+     "beneficiary_external_reference": "string",
+     "business_nature": "string",
+     "company_website": "string"
+    },
+    "evidence": [
+     "openapi/_original/currencycloud-openapi-original.yml#GET /beneficiaries/{id}",
+     "openapi/_original/currencycloud-openapi-original.yml#POST /beneficiaries/{id}"
+    ]
+   },
+   "due": {
+    "segments": [
+     "recipients"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "label": "string",
+     "details": null,
+     "isExternal": "boolean",
+     "isActive": "boolean",
+     "isValid": "boolean",
+     "name": "string"
+    },
+    "evidence": [
+     "openapi/_original/due-openapi-original.yml#DELETE /v1/recipients/{id}",
+     "openapi/_original/due-openapi-original.yml#GET /v1/recipients",
+     "openapi/_original/due-openapi-original.yml#GET /v1/recipients/{id}",
+     "openapi/_original/due-openapi-original.yml#POST /v1/recipients"
+    ]
+   },
+   "euronet": {
+    "segments": [
+     "recipients"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "content": "array",
+     "message": "string",
+     "errors": "array",
+     "warnings": "array",
+     "information": "array",
+     "bankCountryCode": "string",
+     "currencyCode": "string",
+     "fields": "array"
+    },
+    "evidence": [
+     "openapi/_original/xe-payments-api-openapi.json#DELETE /recipients/{recipientId}",
+     "openapi/_original/xe-payments-api-openapi.json#GET /recipients",
+     "openapi/_original/xe-payments-api-openapi.json#POST /recipients"
+    ]
+   },
+   "famous": {
+    "segments": [
+     "recipients"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/famous-spring-api-swagger.json#GET /seller/v1/messages/recipients"
+    ]
+   },
+   "fin": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "GET collection",
+     "PATCH collection",
+     "POST collection"
+    ],
+    "properties": {
+     "beneficiary_id": "string",
+     "customer_id": "string",
+     "country": "string",
+     "currency": "string",
+     "counter_party": "string",
+     "account_holder": null,
+     "account_holder_address": "object",
+     "receiver_meta_data": "object",
+     "developer_fee": "object",
+     "bank_account": "object",
+     "bank_address": "object",
+     "bank_routing": "array",
+     "deposit_instruction": "object",
+     "refund_instruction": "object",
+     "settlement_config": "object",
+     "id": "string",
+     "status": "string",
+     "active": "boolean",
+     "country_code": "string",
+     "business_name": "string",
+     "type": "string",
+     "nationality": "string",
+     "email": "string",
+     "phone": "string",
+     "method": "string",
+     "account_number": "string",
+     "refund_wallet_address": "string",
+     "developer_fee_fixed": "number",
+     "developer_fee_percentage": "number",
+     "liquidation_address": "string",
+     "auto_settlement": "boolean",
+     "source_currency": "string",
+     "source_chain": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "message": "string"
+    },
+    "evidence": [
+     "openapi/_original/fin-openapi-original.yml#GET /v1/customers/{customer_id}/beneficiaries",
+     "openapi/_original/fin-openapi-original.yml#PATCH /v1/beneficiaries",
+     "openapi/_original/fin-openapi-original.yml#POST /v2/beneficiaries",
+     "openapi/_original/fin-openapi-original.yml#POST /v3/beneficiaries"
+    ]
+   },
+   "fipto": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "type": "string",
+     "attributes": "object",
+     "meta": "object",
+     "id": null,
+     "status": "string",
+     "internal": "boolean",
+     "corridor": "string",
+     "created_by": null,
+     "pending_action_initiated_by": null,
+     "caller_can_approve": "boolean",
+     "approval_progress": null
+    },
+    "evidence": [
+     "openapi/_original/fipto-customer-api-openapi.json#DELETE /companies/{company_id}/beneficiaries/{beneficiary_id}",
+     "openapi/_original/fipto-customer-api-openapi.json#GET /companies/{company_id}/aisp-pisp/beneficiaries",
+     "openapi/_original/fipto-customer-api-openapi.json#GET /companies/{company_id}/aisp-pisp/beneficiaries/{beneficiary_id}",
+     "openapi/_original/fipto-customer-api-openapi.json#GET /companies/{company_id}/beneficiaries",
+     "openapi/_original/fipto-customer-api-openapi.json#GET /companies/{company_id}/beneficiaries/{beneficiary_id}",
+     "openapi/_original/fipto-customer-api-openapi.json#POST /companies/{company_id}/beneficiaries",
+     "openapi/_original/fipto-customer-api-openapi.json#POST /companies/{company_id}/beneficiaries/batch",
+     "openapi/_original/fipto-customer-api-openapi.yml#DELETE /companies/{company_id}/beneficiaries/{beneficiary_id}",
+     "openapi/_original/fipto-customer-api-openapi.yml#GET /companies/{company_id}/aisp-pisp/beneficiaries",
+     "openapi/_original/fipto-customer-api-openapi.yml#GET /companies/{company_id}/aisp-pisp/beneficiaries/{beneficiary_id}",
+     "openapi/_original/fipto-customer-api-openapi.yml#GET /companies/{company_id}/beneficiaries",
+     "openapi/_original/fipto-customer-api-openapi.yml#GET /companies/{company_id}/beneficiaries/{beneficiary_id}"
+    ]
+   },
+   "interchecks": {
+    "segments": [
+     "recipients"
+    ],
+    "operations": [
+     "GET item",
+     "PATCH item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "recipient_id": "string",
+     "reference_id": "string",
+     "email": "string",
+     "first_name": "string",
+     "last_name": "string",
+     "company_name": "string",
+     "dob": "string"
+    },
+    "evidence": [
+     "openapi/_original/interchecks-payments-api-v2-registry.json#GET /api/v2/{payer_id}/recipients/{recipient_id}",
+     "openapi/_original/interchecks-payments-api-v2-registry.json#POST /api/v2/{payer_id}/recipients",
+     "openapi/_original/interchecks-payments-api-v2.json#GET /api/v2/{payer_id}/recipients/{recipient_id}",
+     "openapi/_original/interchecks-payments-api-v2.json#PATCH /api/v2/{payer_id}/recipients/{recipient_id}",
+     "openapi/_original/interchecks-payments-api-v2.json#POST /api/v2/{payer_id}/recipients",
+     "openapi/_original/interchecks-payments-api-v2.json#PUT /api/v2/{payer_id}/recipients/{recipient_id}"
+    ]
+   },
+   "lean-technologies": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "string",
+     "results_id": "string",
+     "message": "string",
+     "meta": [
+      "object",
+      "null"
+     ],
+     "timestamp": "string",
+     "status_detail": [
+      "object",
+      "null"
+     ],
+     "refreshed_at": [
+      "string",
+      "null"
+     ],
+     "type": [
+      "string",
+      "null"
+     ],
+     "account_id": "string",
+     "account_holder_name": "string",
+     "account_holder_short_name": "string",
+     "beneficiary_id": "string",
+     "beneficiary_type": "string",
+     "creditor_agent": "object",
+     "creditor_account": "object",
+     "reference": "string",
+     "supplementary_data": "object",
+     "Data": [
+      "object",
+      "null"
+     ],
+     "Status": "string",
+     "Message": "string",
+     "Timestamp": "string",
+     "RefreshedAt": [
+      "string",
+      "null"
+     ],
+     "StatusDetail": [
+      "object",
+      "null"
+     ],
+     "Meta": [
+      "object",
+      "null"
+     ],
+     "Links": [
+      "object",
+      "null"
+     ]
+    },
+    "evidence": [
+     "openapi/_original/lean-technologies-data-openapi.yml#GET /data/v2/accounts/{account_id}/beneficiaries",
+     "openapi/_original/lean-technologies-ksa-bank-data-openapi.yml#GET /data/v2/accounts/{account_id}/beneficiaries",
+     "openapi/_original/lean-technologies-ksa-open-banking-openapi.yml#GET /open-banking/account-information/2022.11.01-final-errata2/accounts/{AccountId}/beneficiaries"
+    ]
+   },
+   "lianlian-global": {
+    "segments": [
+     "payee",
+     "beneficiaries"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item",
+     "PUT item"
+    ],
+    "properties": {
+     "payeeId": "string",
+     "payeeType": "string",
+     "payeeNameCn": "string",
+     "payeeNameEn": "string",
+     "payeeDate": "string",
+     "payeeIdType": "string",
+     "payeeIdScanFront": "string",
+     "payeeIdScanBack": "string",
+     "payeeIdNo": "string",
+     "payeeAddress": "string",
+     "payeeOperateAddress": "string",
+     "payeeIdIsLt": "string",
+     "payeeIdIssue": "string",
+     "payeeIdExpiry": "string",
+     "payeeContactNo": "string",
+     "corporateNature": "string",
+     "legalPersIdScanFront": "string",
+     "legalPersIdScanBack": "string",
+     "legalPersNameCn": "string",
+     "legalPersNameEn": "string",
+     "legalPersIdNo": "string",
+     "legalPersIdIsLt": "string",
+     "legalPersIdIssue": "string",
+     "legalPersIdExpiry": "string",
+     "legalPersIdAddress": "string",
+     "uboInfo": "array",
+     "payeeStatus": "string",
+     "failedReason": "string",
+     "payeeNation": "string",
+     "payeeCiScan": "string",
+     "payeeCiNo": "string",
+     "payeeBrScan": "string",
+     "payeeBrNo": "string",
+     "payeeBrExpiry": "string",
+     "legalPersIdType": "string",
+     "legalPersCountryCode": "string",
+     "legalPersDob": "string",
+     "uboEvidence": "string",
+     "payeeCountryCode": "string",
+     "payeeName": "string",
+     "payeeContactName": "string",
+     "payeeContactNumber": "string",
+     "payeeEmailAddress": "string",
+     "payeeBirthDay": "string",
+     "payeePhone": "string",
+     "payeeFirstName": "string",
+     "payeeLastName": "string",
+     "payeeTaxId": "string",
+     "status": "string",
+     "result": "boolean",
+     "beneficiary_id": "string",
+     "page_size": "string",
+     "page": "string",
+     "total_count": "string",
+     "total_page": "string",
+     "page_list": "array"
+    },
+    "evidence": [
+     "openapi/_original/lianlian-global-b2b-cross-border-payee-openapi.yml#GET /payee/{payeeId}",
+     "openapi/_original/lianlian-global-b2b-cross-border-payee-openapi.yml#POST /payee",
+     "openapi/_original/lianlian-global-b2b-cross-border-payee-openapi.yml#PUT /payee/{payeeId}",
+     "openapi/_original/lianlian-global-b2b-inflow-payout-hk-payee-openapi.yml#GET /payee/{payeeId}",
+     "openapi/_original/lianlian-global-b2b-inflow-payout-hk-payee-openapi.yml#POST /payee",
+     "openapi/_original/lianlian-global-b2b-inflow-payout-hk-payee-openapi.yml#PUT /payee/{payeeId}",
+     "openapi/_original/lianlian-global-b2b-inflow-payout-payee-openapi.yml#GET /payee/{payeeId}",
+     "openapi/_original/lianlian-global-b2b-inflow-payout-payee-openapi.yml#POST /payee",
+     "openapi/_original/lianlian-global-b2b-inflow-payout-payee-openapi.yml#PUT /payee/{payeeId}",
+     "openapi/_original/lianlian-global-global-payout-payee-openapi.yml#GET /payee/{payeeId}",
+     "openapi/_original/lianlian-global-global-payout-payee-openapi.yml#POST /payee",
+     "openapi/_original/lianlian-global-global-payout-payee-openapi.yml#PUT /payee/{payeeId}"
+    ]
+   },
+   "mamo": {
+    "segments": [
+     "recipients"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "PATCH item",
+     "POST collection"
+    ],
+    "properties": {
+     "identifier": "string",
+     "recipient_type": "string",
+     "name": "string",
+     "relationship": "string",
+     "email": "string",
+     "eid_number": "string",
+     "reason": "string",
+     "address": "object",
+     "bank": "object",
+     "created_at": "string",
+     "recipient_meta": "object",
+     "business_name": "string",
+     "first_name": "string",
+     "last_name": "string",
+     "success": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/mamo-openapi.yml#DELETE /accounts/recipients/{recipientIdentifier}",
+     "openapi/_original/mamo-openapi.yml#GET /accounts/recipients",
+     "openapi/_original/mamo-openapi.yml#GET /accounts/recipients/{recipientIdentifier}",
+     "openapi/_original/mamo-openapi.yml#PATCH /accounts/recipients/{recipientIdentifier}",
+     "openapi/_original/mamo-openapi.yml#POST /accounts/recipients"
+    ]
+   },
+   "mercoa": {
+    "segments": [
+     "payees"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/mercoa-openapi.yml#GET /entity/{entityId}/counterparties/payees"
+    ]
+   },
+   "open-financial": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "id": "string",
+     "object": "string",
+     "type": "string",
+     "name_of_account_holder": "string",
+     "email": "string",
+     "phone": "string",
+     "bank_account_number": "string",
+     "bank_ifsc_code": "string",
+     "bank_name": null,
+     "metadata": "object",
+     "created_at": "integer",
+     "status": "string",
+     "is_sandbox": "boolean",
+     "account_id": "string",
+     "deleted": "boolean",
+     "deleted_at": "integer"
+    },
+    "evidence": [
+     "openapi/_original/open-financial-1-openapi.yml#DELETE /v1/accounts/beneficiaries/{beneficiary_id}",
+     "openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/beneficiaries/{beneficiary_id}",
+     "openapi/_original/open-financial-1-openapi.yml#GET /v1/accounts/{account_id}/beneficiaries",
+     "openapi/_original/open-financial-1-openapi.yml#POST /v1/accounts/beneficiaries/{beneficiary_id}",
+     "openapi/_original/open-financial-1-openapi.yml#POST /v1/accounts/{account_id}/beneficiaries"
+    ]
+   },
+   "papaya-global": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "active": "boolean",
+     "name": "string",
+     "entity_type": "string",
+     "country": "string",
+     "currency": "string",
+     "entity": "object",
+     "bank_details": "object",
+     "user_tags": "object",
+     "tags": "array",
+     "status": "string",
+     "payments": "array",
+     "issues": "array"
+    },
+    "evidence": [
+     "openapi/_original/papaya-global-workforce-payments-api.yml#GET /payments/beneficiaries",
+     "openapi/_original/papaya-global-workforce-payments-api.yml#GET /payments/beneficiaries/{id}",
+     "openapi/_original/papaya-global-workforce-payments-api.yml#POST /payments/beneficiaries",
+     "openapi/_original/papaya-global-workforce-payments-api.yml#PUT /payments/beneficiaries/{id}"
+    ]
+   },
+   "ripple-labs": {
+    "segments": [
+     "counterparties"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "createdBy": "string",
+     "createdAt": "string",
+     "updatedBy": "string",
+     "updatedAt": "string",
+     "name": "string",
+     "description": "string",
+     "details": null,
+     "addressCount": "integer"
+    },
+    "evidence": [
+     "openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#DELETE /v2/counterparties/{id}",
+     "openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#GET /v2/counterparties",
+     "openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#GET /v2/counterparties/{id}",
+     "openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#POST /v2/counterparties",
+     "openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#PUT /v2/counterparties/{id}"
+    ]
+   },
+   "tesser": {
+    "segments": [
+     "counterparties"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "workspace_id": "string",
+     "classification": "string",
+     "tenant_id": "string",
+     "individual_first_name": "string",
+     "individual_last_name": "string",
+     "individual_address_country": "string",
+     "individual_date_of_birth": "string",
+     "individual_national_identification_number": "string",
+     "individual_street_address1": "string",
+     "individual_street_address2": "string",
+     "individual_city": "string",
+     "individual_state": "string",
+     "individual_postal_code": "string",
+     "business_legal_name": "string",
+     "business_dba": "string",
+     "business_address_country": "string",
+     "business_street_address1": "string",
+     "business_street_address2": "string",
+     "business_city": "string",
+     "business_state": "string",
+     "business_legal_entity_identifier": "string",
+     "created_at": "string",
+     "updated_at": "string"
+    },
+    "evidence": [
+     "openapi/_original/tesser-openapi-original.json#GET /v1/entities/counterparties",
+     "openapi/_original/tesser-openapi-original.json#GET /v1/entities/counterparties/{id}",
+     "openapi/_original/tesser-openapi-original.json#POST /v1/entities/counterparties"
+    ]
+   },
+   "volt-io": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "name": "string",
+     "accountIdentifiers": null
+    },
+    "evidence": [
+     "openapi/_original/volt-io-accounts-openapi-original.yaml#GET /accounts/{accountId}/beneficiaries"
+    ]
+   },
+   "vopay": {
+    "segments": [
+     "recipients"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "Success": "boolean",
+     "ErrorMessage": "string",
+     "PaypalRecipients": "object",
+     "VenmoRecipients": "object",
+     "NumberOfRecords": "integer",
+     "Recipients": "object"
+    },
+    "evidence": [
+     "openapi/_original/vopay-payment-method-api-reference.json#GET /paypal/recipients",
+     "openapi/_original/vopay-payment-method-api-reference.json#GET /venmo/recipients",
+     "openapi/_original/vopay-payment-method-api-reference.json#GET /zelle/recipients"
+    ]
+   },
+   "zero-hash": {
+    "segments": [
+     "beneficiaries"
+    ],
+    "operations": [
+     "PATCH item"
+    ],
+    "properties": {
+     "first_name": "string",
+     "last_name": "string",
+     "email": "string",
+     "address_one": "string",
+     "address_two": "string",
+     "jurisdiction_code": "string",
+     "city": "string",
+     "zip": "string",
+     "date_of_birth": "string",
+     "id_number_type": "string",
+     "id_number": "string",
+     "citizenship_code": "string",
+     "non_us_other_type": "string",
+     "id_issuing_authority": "string",
+     "phone_number": "string",
+     "platform_code": "string",
+     "participant_code": "string",
+     "tax_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/zero-hash-api-openapi.json#PATCH /participants/beneficiaries/{participant_code}",
+     "openapi/_original/zero-hash-api-openapi.yml#PATCH /participants/beneficiaries/{participant_code}"
+    ]
+   }
+  },
+  "payout": {
+   "airtm": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "partner_id": "string",
+     "status": "string",
+     "amount": "Number",
+     "description": "string",
+     "confirmation_uri": "string",
+     "cancel_uri": "string",
+     "failure_uri": "string",
+     "failure_reason": "string",
+     "callback_uri": "string",
+     "airtm_operation_id": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "airtm_user_email": "string",
+     "airtm_user_id": "string",
+     "operation_type": "string",
+     "airtm_operation_hash": "string",
+     "reason_code": "string",
+     "email": "string",
+     "code": "string",
+     "bulkPayoutId": "string",
+     "hash": "string",
+     "airtmUserId": "string",
+     "airtmUserEmail": "string",
+     "requireIdVerified": "boolean",
+     "notes": "string",
+     "internalNote": "string",
+     "grossAmount": "number",
+     "netAmount": "number",
+     "airtmFee": "number",
+     "enterpriseFee": "number",
+     "reasonCode": "string",
+     "reasonDescription": "string",
+     "kycInformation": "object",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "commit": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/airtm-enterprise-v1-openapi.json#POST payouts",
+     "openapi/_original/airtm-enterprise-v2-openapi.json#DELETE /payouts/{id}",
+     "openapi/_original/airtm-enterprise-v2-openapi.json#GET /payouts",
+     "openapi/_original/airtm-enterprise-v2-openapi.json#GET /payouts/{id}",
+     "openapi/_original/airtm-enterprise-v2-openapi.json#POST /payouts"
+    ]
+   },
+   "airwallex": {
+    "segments": [
+     "payouts",
+     "transfers"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/airwallex-openapi.yml#GET /api/v1/payouts/{id}",
+     "openapi/_original/airwallex-openapi.yml#GET /api/v1/transfers/{id}"
+    ]
+   },
+   "augustus": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "status": "string",
+     "account_id": "string",
+     "amount": "string",
+     "currency": "string",
+     "counterparty_id": "string",
+     "unstructured_remittance_information": "string",
+     "purpose_code": null,
+     "tracking_reference": "object",
+     "failure": "object",
+     "metadata": "object",
+     "initiated_at": "string",
+     "sent_at": "string",
+     "tx_hash": "string",
+     "rail": "string"
+    },
+    "evidence": [
+     "openapi/_original/augustus-openapi.json#GET /v1/payouts",
+     "openapi/_original/augustus-openapi.json#GET /v1/payouts/{id}",
+     "openapi/_original/augustus-openapi.json#POST /v1/payouts"
+    ]
+   },
+   "aza-finance": {
+    "segments": [
+     "payout"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "input_currency": "string",
+     "payin_methods": "array",
+     "metadata": "object",
+     "sender": "object",
+     "recipients": "array",
+     "traits": "object",
+     "state": "string",
+     "input_amount": "number",
+     "payin_reference": "string",
+     "paid_amount": "number",
+     "due_amount": "number",
+     "created_at": "string",
+     "expires_at": "string",
+     "external_id": "string",
+     "id": "string",
+     "errors": null
+    },
+    "evidence": [
+     "openapi/_original/aza-finance-openapi-original.json#POST /transactions/{Transaction ID}/payout"
+    ]
+   },
+   "bitpay": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "amount": "number",
+     "currency": "string",
+     "ledgerCurrency": "string",
+     "reference": "string",
+     "label": "string",
+     "notificationURL": "string",
+     "notificationEmail": "string",
+     "email": "string",
+     "recipientId": "string",
+     "shopperId": "string",
+     "status": "string",
+     "requestDate": "string",
+     "dateExecuted": "string",
+     "transactions": "array",
+     "token": "string",
+     "message": "string",
+     "data": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#DELETE /payouts/{payoutId}",
+     "openapi/_original/openapi.yml#GET /payouts",
+     "openapi/_original/openapi.yml#GET /payouts/{payoutId}",
+     "openapi/_original/openapi.yml#POST /payouts"
+    ]
+   },
+   "bridge": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "client_reference_id": "string",
+     "amount": "string",
+     "currency": "string",
+     "on_behalf_of": "string",
+     "developer_fee": "string",
+     "developer_fee_percent": "string",
+     "source": null,
+     "destination": null,
+     "state": "string",
+     "source_deposit_instructions": null,
+     "receipt": "object",
+     "return_details": "object",
+     "return_instructions": "object",
+     "exchange_details": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "template_id": "string",
+     "dry_run": "boolean",
+     "features": "object",
+     "initiation": null,
+     "travel_rule_data": null
+    },
+    "evidence": [
+     "openapi/_original/bridge-openapi-original.json#DELETE /transfers/{transferID}",
+     "openapi/_original/bridge-openapi-original.json#GET /customers/{customerID}/transfers",
+     "openapi/_original/bridge-openapi-original.json#GET /transfers",
+     "openapi/_original/bridge-openapi-original.json#GET /transfers/{transferID}",
+     "openapi/_original/bridge-openapi-original.json#POST /transfers",
+     "openapi/_original/bridge-openapi-original.json#PUT /transfers/{transferID}"
+    ]
+   },
+   "cadana": {
+    "segments": [
+     "payouts",
+     "remittances",
+     "disbursements",
+     "transfers"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "beneficiaryId": "string",
+     "quoteId": "string",
+     "reference": "string",
+     "amount": "object",
+     "sourceAmount": "object",
+     "feeAmount": "object",
+     "fxRate": "string",
+     "status": "string",
+     "createdTimestamp": "integer",
+     "lastUpdatedTimestamp": "integer",
+     "businessId": "string",
+     "countryCode": "string",
+     "authorityName": "string",
+     "createdAt": "number",
+     "updatedAt": "number",
+     "filingIds": "array",
+     "fundFromCurrency": "string",
+     "paymentDetails": null,
+     "paymentReference": "string",
+     "authorityId": "string",
+     "fundedCurrency": "string",
+     "fundedAmount": "number",
+     "paymentMethod": "string",
+     "receiptUrl": "string",
+     "statusHistory": "array",
+     "tenantKey": "string",
+     "referenceId": "string",
+     "description": "string",
+     "type": "string",
+     "userId": "string",
+     "personId": "string",
+     "userName": "string",
+     "totalAmount": null,
+     "fxRevenueShare": null,
+     "feeRevenueShare": null,
+     "totalRevenueShare": null,
+     "estimatedDelivery": "string",
+     "externalReference": "string",
+     "sourceTenantKey": "string",
+     "destinationTenantKey": "string"
+    },
+    "evidence": [
+     "openapi/_original/cadana-embedded-payments-openapi.yaml#GET /v1/payouts",
+     "openapi/_original/cadana-embedded-payments-openapi.yaml#GET /v1/payouts/{payoutId}",
+     "openapi/_original/cadana-embedded-payments-openapi.yaml#POST /v1/payouts",
+     "openapi/_original/cadana-statutory-compliance-openapi.yaml#GET /v1/statutory/remittances",
+     "openapi/_original/cadana-statutory-compliance-openapi.yaml#GET /v1/statutory/remittances/{remittance_id}",
+     "openapi/_original/cadana-statutory-compliance-openapi.yaml#POST /v1/statutory/remittances",
+     "openapi/_original/cadana-workforce-management-openapi.yaml#GET /v1/platform/disbursements",
+     "openapi/_original/cadana-workforce-management-openapi.yaml#GET /v1/platform/disbursements/{disbursementId}",
+     "openapi/_original/cadana-workforce-management-openapi.yaml#POST /v1/platform/transfers"
+    ]
+   },
+   "caliza": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "amount": "object",
+     "target": "string",
+     "targetType": "string",
+     "paymentRailType": "string"
+    },
+    "evidence": [
+     "openapi/_original/caliza-api-documentation-reference-openapi.yml#POST /v1/transactions/payouts"
+    ]
+   },
+   "cashfree": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "transfer_id": "string",
+     "cf_transfer_id": "string",
+     "status": "string",
+     "beneficiary_details": "object",
+     "transfer_amount": "number",
+     "transfer_service_charge": "number",
+     "transfer_service_tax": "number",
+     "transfer_mode": "string",
+     "transfer_utr": "string",
+     "fundsource_id": "string",
+     "added_on": "string",
+     "updated_on": "string",
+     "transfer_currency": "string",
+     "transfer_remarks": "string",
+     "batch_transfer_id": "string",
+     "cf_batch_transfer_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi-payouts.json#GET /transfers",
+     "openapi/_original/openapi-payouts.json#GET /transfers/batch",
+     "openapi/_original/openapi-payouts.json#POST /transfers",
+     "openapi/_original/openapi-payouts.json#POST /transfers/batch"
+    ]
+   },
+   "chariot": {
+    "segments": [
+     "disbursements"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "organization_id": "string",
+     "organization": "object",
+     "program_id": "string",
+     "amount": "integer",
+     "description": "string",
+     "auto_fund": "boolean",
+     "created_at": "string",
+     "updated_at": "string",
+     "status": "string",
+     "cancelation": "object",
+     "approval": "object",
+     "rejection": "object",
+     "verification": "object",
+     "stop": "object",
+     "program_details": "object",
+     "transfers": "array",
+     "bypass_chariot_organization_verification": "boolean",
+     "transactions": "array",
+     "idempotency_key": "string",
+     "internal_transaction_id": "string",
+     "fee_amount": "integer",
+     "type": "string",
+     "purpose": "string",
+     "note": "string",
+     "recipient_name": "string",
+     "donors": "object",
+     "daf_grant": "object",
+     "corporate_match": "object",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/chariot-openapi-original.yml#GET /v1/disbursements",
+     "openapi/_original/chariot-openapi-original.yml#GET /v1/disbursements/{id}",
+     "openapi/_original/chariot-openapi-original.yml#POST /v1/disbursements",
+     "openapi/_original/chariot-openapi-original.yml#POST /v1/disbursements/bulk"
+    ]
+   },
+   "chimoney": {
+    "segments": [
+     "transfer"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "valueInUSD": "number",
+     "chimoney": "number",
+     "issueID": "string",
+     "fee": "number",
+     "type": "string",
+     "issuer": "string",
+     "enabledToRedeem": "array",
+     "t_id": "number",
+     "twitter": "string",
+     "chiRef": "string",
+     "issueDate": "string",
+     "redeemData": "object",
+     "initiatedBy": "string",
+     "redeemLink": "string",
+     "subAccount": "string",
+     "receiver": "string",
+     "wallet": "string",
+     "personalizedMessage": "string",
+     "narration": "string",
+     "integration": "object",
+     "sender": "string",
+     "amountToSend": "string",
+     "originCurrency": "string",
+     "email": "string",
+     "phoneNumber": "string",
+     "destinationCurrency": "string",
+     "turnOffNotification": "boolean",
+     "sendViaInterledger": "boolean",
+     "paymentDate": "string"
+    },
+    "evidence": [
+     "openapi/_original/chimoney-openapi.json#POST /v0.2.4/accounts/transfer",
+     "openapi/_original/chimoney-openapi.json#POST /v0.2.4/multicurrency-wallets/transfer",
+     "openapi/_original/chimoney-openapi.json#POST /v0.2.4/wallets/transfer"
+    ]
+   },
+   "coinflow": {
+    "segments": [
+     "payout"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "transactions": "array",
+     "wallet": "string",
+     "blockchain": "string",
+     "userId": "string",
+     "amount": "object",
+     "speed": "string",
+     "account": "string"
+    },
+    "evidence": [
+     "openapi/_original/coinflow-openapi-original.json#POST /merchant/withdraws/payout"
+    ]
+   },
+   "connexpay": {
+    "segments": [
+     "payouts",
+     "transfer"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "payoutGuid": "string",
+     "merchantGuid": "string",
+     "payoutReferenceToken": "string",
+     "memo": "string",
+     "status": "string",
+     "payments": "array",
+     "orderNumber": "string",
+     "customerId": "string",
+     "associationId": "string",
+     "labelIds": "array",
+     "createdDate": "string",
+     "createdBy": "string",
+     "TransferredFrom": "string",
+     "TransferredTo": "string",
+     "Amount": "integer"
+    },
+    "evidence": [
+     "openapi/_original/connexpay-push-to-card-openapi.yml#GET /api/v1/PushToCard/Payouts/{payoutGuid}",
+     "openapi/_original/connexpay-push-to-card-openapi.yml#POST /api/v1/PushToCard/Payouts",
+     "openapi/_original/connexpay-sales-openapi.yml#POST /api/v1/MerchantFlexFunding/Funds/Transfer"
+    ]
+   },
+   "cryptomus": {
+    "segments": [
+     "payout"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "state": "integer",
+     "result": "array",
+     "url_callback": "string",
+     "currency": "string",
+     "network": "string",
+     "uuid": "string",
+     "order_id": "string",
+     "status": "string",
+     "amount": "string",
+     "address": "string",
+     "txid": "string",
+     "is_final": "boolean",
+     "balance": "number",
+     "payer_currency": "string",
+     "payer_amount": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "is_subtract": "boolean",
+     "to_currency": "string",
+     "from_currency": "string",
+     "course_source": "string",
+     "priority": "string",
+     "memo": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#POST /payout",
+     "openapi/_original/openapi.yml#POST /test-webhook/payout"
+    ]
+   },
+   "currencycloud": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "id": "string",
+     "short_reference": "string",
+     "source_account_id": "string",
+     "destination_account_id": "string",
+     "currency": "string",
+     "amount": "string",
+     "status": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "completed_at": "string",
+     "creator_account_id": "string",
+     "creator_contact_id": "string",
+     "reason": "string",
+     "unique_request_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/currencycloud-openapi-original.yml#GET /transfers/{id}"
+    ]
+   },
+   "cybersource": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "_links": "object",
+     "id": "string",
+     "submitTimeUtc": "string",
+     "status": "string",
+     "reconciliationId": "string",
+     "errorInformation": "object",
+     "clientReferenceInformation": "object",
+     "merchantInformation": "object",
+     "orderInformation": "object",
+     "processorInformation": "object",
+     "recipientInformation": "object",
+     "issuerInformation": "object",
+     "tokenInformation": "object",
+     "processingInformation": "object",
+     "senderInformation": "object",
+     "paymentInformation": "object",
+     "aggregatorInformation": "object"
+    },
+    "evidence": [
+     "openapi/_original/openapi.json#POST /pts/v2/payouts"
+    ]
+   },
+   "d-local": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "from_account": "string",
+     "to_account": "string",
+     "amount": "number",
+     "currency": "string",
+     "description": "string"
+    },
+    "evidence": [
+     "openapi/_original/d-local-platforms-api-openapi.yml#GET /v2/transfers/{transfer_id}",
+     "openapi/_original/d-local-platforms-api-openapi.yml#POST /v2/transfers"
+    ]
+   },
+   "dailypay": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "type": "string",
+     "id": "string",
+     "attributes": null,
+     "links": "object",
+     "relationships": "object"
+    },
+    "evidence": [
+     "openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/transfers",
+     "openapi/_original/dailypay-rest-openapi-original.yml#GET /rest/transfers/{transfer_id}",
+     "openapi/_original/dailypay-rest-openapi-original.yml#POST /rest/transfers"
+    ]
+   },
+   "dlocal": {
+    "segments": [
+     "payouts",
+     "transfers"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "request_id": "string",
+     "amount": "number",
+     "currency": "string",
+     "country": "string",
+     "beneficiary": "object",
+     "payment_method_id": "string",
+     "status": "string",
+     "status_code": "string",
+     "status_detail": "string",
+     "created_date": "string",
+     "updated_date": "string",
+     "transaction_id": "string",
+     "login": "string",
+     "trans_key": "string",
+     "amount_in_usd": "number",
+     "comment": "string",
+     "notification_url": "string",
+     "purpose": "string",
+     "fx_quote_id": "string",
+     "account_id": "string",
+     "description": "string",
+     "reference_id": "string"
+    },
+    "evidence": [
+     "openapi/_original/dlocal-payouts-openapi.yml#GET /payouts/{payout_id}",
+     "openapi/_original/dlocal-payouts-openapi.yml#POST /payouts",
+     "openapi/_original/dlocal-platforms-openapi.yml#GET /transfers/{transfer_id}",
+     "openapi/_original/dlocal-platforms-openapi.yml#POST /transfers"
+    ]
+   },
+   "due": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "ownerId": "string",
+     "status": "string",
+     "source": "object",
+     "destination": "object",
+     "fxRate": "number",
+     "fxMarkup": "integer",
+     "transferInstructions": null,
+     "createdAt": "string",
+     "expiresAt": "string",
+     "breakdown": "array",
+     "quote": "string",
+     "recipient": "string",
+     "sender": null,
+     "memo": "string",
+     "purposeCode": "string"
+    },
+    "evidence": [
+     "openapi/_original/due-openapi-original.yml#GET /v1/transfers",
+     "openapi/_original/due-openapi-original.yml#GET /v1/transfers/{id}",
+     "openapi/_original/due-openapi-original.yml#POST /v1/transfers"
+    ]
+   },
+   "famous": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {},
+    "evidence": [
+     "openapi/_original/famous-spring-api-swagger.json#GET /seller/v1/payouts"
+    ]
+   },
+   "fincra": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "reference": "string",
+     "customerReference": "string",
+     "status": "string",
+     "amount": "number",
+     "sourceCurrency": "string",
+     "destinationCurrency": "string",
+     "business": "string",
+     "description": "string",
+     "paymentDestination": "string",
+     "paymentScheme": "string",
+     "quoteReference": "string",
+     "beneficiary": "object"
+    },
+    "evidence": [
+     "openapi/_original/fincra-openapi.yml#GET /disbursements/payouts",
+     "openapi/_original/fincra-openapi.yml#POST /disbursements/payouts"
+    ]
+   },
+   "finix": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "DELETE collection",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "page": "object",
+     "_embedded": "object",
+     "_links": "object",
+     "transfers": "array",
+     "id": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "additional_buyer_charges": "object",
+     "additional_healthcare_data": "object",
+     "additional_purchase_data": "object",
+     "address_verification": "string",
+     "amount": "integer",
+     "amount_requested": "integer",
+     "application": "string",
+     "card_present_details": "object",
+     "currency": "string",
+     "destination": "string",
+     "device": "string",
+     "externally_funded": "string",
+     "failure_code": "string",
+     "failure_message": "string",
+     "fee": "integer",
+     "fee_type": "string",
+     "idempotency_id": "string",
+     "merchant": "string",
+     "merchant_identity": "string",
+     "parent_transfer": "string",
+     "parent_transfer_trace_id": "string",
+     "messages": "array",
+     "raw": "object",
+     "ready_to_settle_at": "string",
+     "security_code_verification": "string",
+     "source": "string",
+     "split_transfers": "string",
+     "state": "string",
+     "statement_descriptor": "string",
+     "subtype": "string",
+     "tags": "object",
+     "trace_id": "string",
+     "type": "string",
+     "adjustment_request": "boolean",
+     "fraud_session_id": "string",
+     "hsa_fsa_payment": "boolean",
+     "operation_key": "string",
+     "processor": "string",
+     "security_code": "string",
+     "3d_secure_authentication": "object",
+     "additional_purchase_data ": "object",
+     "device_configuration": "object"
+    },
+    "evidence": [
+     "openapi/_original/finix-openapi-original.yml#DELETE /settlements/{settlement_id}/transfers",
+     "openapi/_original/finix-openapi-original.yml#GET /settlements/{settlement_id}/transfers",
+     "openapi/_original/finix-openapi-original.yml#GET /transfers",
+     "openapi/_original/finix-openapi-original.yml#GET /transfers/{transfer_id}",
+     "openapi/_original/finix-openapi-original.yml#POST /transfers",
+     "openapi/_original/finix-openapi-original.yml#PUT /transfers/{transfer_id}"
+    ]
+   },
+   "fintary": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "success": "boolean",
+     "data": null,
+     "message": "string",
+     "statusCode": "number",
+     "rows": "array",
+     "pageRowCount": "integer",
+     "rowCount": "integer",
+     "startDate": "string",
+     "endDate": "string",
+     "page": "integer"
+    },
+    "evidence": [
+     "openapi/_original/fintary-open-api-openapi.json#GET /openapi/agents/{id}/payouts",
+     "openapi/_original/fintary-open-api-openapi.yml#GET /openapi/agents/{id}/payouts"
+    ]
+   },
+   "fipto": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "type": "string",
+     "attributes": "object"
+    },
+    "evidence": [
+     "openapi/_original/fipto-customer-api-openapi.json#POST /companies/{company_id}/aisp-pisp/wallets/{wallet_id}/payouts",
+     "openapi/_original/fipto-customer-api-openapi.json#POST /companies/{company_id}/wallets/{wallet_id}/payouts",
+     "openapi/_original/fipto-customer-api-openapi.yml#POST /companies/{company_id}/aisp-pisp/wallets/{wallet_id}/payouts",
+     "openapi/_original/fipto-customer-api-openapi.yml#POST /companies/{company_id}/wallets/{wallet_id}/payouts"
+    ]
+   },
+   "firstpromoter": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "id": "integer",
+     "status": "string",
+     "amount": "number",
+     "payments_batch_id": "integer",
+     "tax_rate": "number",
+     "unit": "string",
+     "period_start": "string",
+     "period_end": "string",
+     "paid_at": "string",
+     "processing_started_at": "string",
+     "failed_at": "string",
+     "error": "string",
+     "total_incl_tax": "number",
+     "created_at": "string",
+     "payout_method": "object",
+     "promoter": "object",
+     "campaign": "object"
+    },
+    "evidence": [
+     "openapi/_original/firstpromoter-v2-affiliate-payouts-openapi.yml#GET /payouts",
+     "openapi/_original/firstpromoter-v2-affiliate-payouts.json#GET /payouts",
+     "openapi/_original/firstpromoter-v2-payouts-openapi.yml#GET /payouts",
+     "openapi/_original/firstpromoter-v2-payouts.json#GET /payouts"
+    ]
+   },
+   "genome": {
+    "segments": [
+     "payout"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "sessionid": "string",
+     "timestamp": "integer",
+     "status": "string",
+     "code": "integer",
+     "message": "string"
+    },
+    "evidence": [
+     "openapi/_original/genome-openapi.yml#POST /api/pf/payout"
+    ]
+   },
+   "hevn-inc": {
+    "segments": [
+     "transfer",
+     "transfers"
+    ],
+    "operations": [
+     "GET collection",
+     "POST collection"
+    ],
+    "properties": {
+     "txHash": null,
+     "userCreated": "boolean",
+     "emailSent": "boolean",
+     "contactId": null,
+     "quoteId": null,
+     "invoiceId": null,
+     "amount": null,
+     "memo": null,
+     "receiverEmail": null,
+     "receiverAddress": null,
+     "transactionLink": null,
+     "time": "string"
+    },
+    "evidence": [
+     "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/apps/transfers",
+     "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/auth/mcp/transfers",
+     "openapi/_original/hevn-inc-openapi-original.json#GET /api/v1/mcp/transfers",
+     "openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/apps/transfer",
+     "openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/apps/{app_id}/transfer",
+     "openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/auth/mcp/transfer",
+     "openapi/_original/hevn-inc-openapi-original.json#POST /api/v1/mcp/transfer"
+    ]
+   },
+   "justifi": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH item"
+    ],
+    "properties": {
+     "id": "string",
+     "type": "string",
+     "data": "array",
+     "page_info": "object",
+     "account_id": "string",
+     "amount": "number",
+     "bank_account": "object",
+     "currency": "string",
+     "delivery_method": "string",
+     "description": "string",
+     "deposits_at": "string",
+     "fees_total": "number",
+     "refunds_count": "number",
+     "refunds_total": "number",
+     "payments_count": "number",
+     "payments_total": "number",
+     "payout_type": "string",
+     "other_total": "number",
+     "status": "string",
+     "settlement_priority": "string",
+     "metadata": "object",
+     "created_at": "string",
+     "updated_at": "string",
+     "csv_url": "string"
+    },
+    "evidence": [
+     "openapi/_original/justifi-openapi-original.yml#GET /payouts",
+     "openapi/_original/justifi-openapi-original.yml#GET /payouts/{id}",
+     "openapi/_original/justifi-openapi-original.yml#GET /reports/payouts/{id}",
+     "openapi/_original/justifi-openapi-original.yml#PATCH /payouts/{id}"
+    ]
+   },
+   "korapay": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "status": "boolean",
+     "message": "string",
+     "data": "array"
+    },
+    "evidence": [
+     "openapi/_original/korapay-openapi.yml#GET /payouts"
+    ]
+   },
+   "lean-technologies": {
+    "segments": [
+     "payments"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "content": "array",
+     "number": "integer",
+     "size": "integer",
+     "total_elements": "integer",
+     "pageable": "object",
+     "last": "boolean",
+     "total_pages": "integer",
+     "sort": "object",
+     "first": "boolean",
+     "number_of_elements": "integer",
+     "empty": "boolean"
+    },
+    "evidence": [
+     "openapi/_original/lean-technologies-ksa-payouts-openapi.yml#GET /payouts/v1/payments",
+     "openapi/_original/lean-technologies-payouts-extended-openapi.yml#GET /payouts/v1/payments",
+     "openapi/_original/lean-technologies-payouts-openapi.yml#GET /payouts/v1/payments"
+    ]
+   },
+   "lianlian-global": {
+    "segments": [
+     "payout",
+     "payouts",
+     "transfer"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "payoutId": "string",
+     "tradeFileInfo": "array",
+     "pricingCurrency": "string",
+     "sourceCurrency": "string",
+     "sourceAmount": "string",
+     "targetCurrency": "string",
+     "targetAmount": "string",
+     "rate": "string",
+     "payeeName": "string",
+     "payeeBankName": "string",
+     "payeeBankAddress": "string",
+     "payeeBankAcctType": "string",
+     "payeeBankAcctNo": "string",
+     "payeeBankDistrict": "string",
+     "payeeBankSwiftCode": "string",
+     "payeeBankType": "string",
+     "payeeBankCode": "string",
+     "tradeCode": "string",
+     "memo": "string",
+     "createTime": "string",
+     "updateTime": "string",
+     "status": "string",
+     "failedReason": "string",
+     "tradeFileId": "array",
+     "payeeId": "string",
+     "CnapsCode": "string",
+     "refundCurrency": "string",
+     "refundAmount": "string",
+     "bankCountryCode": "string",
+     "paymentMethod": "string",
+     "accountRoutingType": "string",
+     "routingNumber": "string",
+     "swiftCode": "string",
+     "cnapsCode": "string",
+     "payoutType": "string",
+     "memberId": "string",
+     " sourceAmount:": "string",
+     "targetCurrency ": "string",
+     "payeeBankAcctName": "string",
+     "modifyTime": "string",
+     " payoutType": "string",
+     " pricingCurrency": "string",
+     "targetCurrency:": "string",
+     "swiftCode:": "string",
+     "transaction_id": "string",
+     "transaction_type": "string",
+     "member_id": "string",
+     "pricing_currency": "string",
+     "source_currency": "string",
+     "source_amount": "string",
+     "target_currency": "string",
+     "target_amount": "string",
+     "commission_undertaker": "string",
+     "payee_bank_account_number": "string",
+     "payee_bank_country_code": "string",
+     "payment_method": "string",
+     "routing_type": "string",
+     "routing_number": "string",
+     "swift_code": "string",
+     "bank_name": "string",
+     "trade_memo": "string",
+     "trade_file_id": "string",
+     "failed_reason": "string",
+     "create_time": "string",
+     "modify_time": "string",
+     "source_member_id": "string",
+     "target_member_id": "string",
+     "page_size": "string",
+     "page": "string",
+     "total_count": "string",
+     "total_page": "string",
+     "page_list": "array",
+     "payoutCurrency": "string",
+     "payoutAmount": "string",
+     "paymentChannel": "string",
+     "payeeBankAccount": "object",
+     "swiftChargeOption": "string",
+     "rfb": "string",
+     "poboPayerInfo": "object",
+     "additionInfo": "object",
+     "failReason": "string",
+     "billId": "string"
+    },
+    "evidence": [
+     "openapi/_original/lianlian-global-b2b-cross-border-payout-import-openapi.yml#GET /payout/{payoutId}",
+     "openapi/_original/lianlian-global-b2b-cross-border-payout-import-openapi.yml#POST /payout",
+     "openapi/_original/lianlian-global-b2b-cross-border-payout-openapi.yml#GET /payout/{payoutId}",
+     "openapi/_original/lianlian-global-b2b-cross-border-payout-openapi.yml#POST /payout",
+     "openapi/_original/lianlian-global-b2b-inflow-payout-payout-openapi.yml#GET /payout/{payoutId}",
+     "openapi/_original/lianlian-global-b2b-inflow-payout-payout-openapi.yml#POST /payout",
+     "openapi/_original/lianlian-global-connect-ota-payout-openapi.yml#GET /payout/{payoutId}",
+     "openapi/_original/lianlian-global-connect-ota-payout-openapi.yml#POST /payout",
+     "openapi/_original/lianlian-global-connect-payout-openapi.yml#GET /v1/payout/{transaction_id}",
+     "openapi/_original/lianlian-global-connect-payout-openapi.yml#POST /v1/payout",
+     "openapi/_original/lianlian-global-connect-transfer-openapi.yml#GET /v1/transfer/{transaction_id}",
+     "openapi/_original/lianlian-global-connect-transfer-openapi.yml#POST /v1/transfer"
+    ]
+   },
+   "loopay": {
+    "segments": [
+     "payouts",
+     "payout"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item"
+    ],
+    "properties": {
+     "id": "number",
+     "uid": "string",
+     "beneficiaryName": "string",
+     "documentTypeId": "number",
+     "documentNumber": "number",
+     "bankBaseId": "number",
+     "bankAccountType": "string",
+     "bankAccount": "string",
+     "Amount": "number",
+     "externalIdentifier": "string",
+     "tags": "Object",
+     "currencyId": "number",
+     "signedBy": "object",
+     "companyProductId": "number",
+     "state": "string",
+     "createdAt": "string",
+     "scheduledAt": "string",
+     "updatedAt": "string",
+     "validatedAt": "string",
+     "trasnferedAt": "string",
+     "reversedAt": "string",
+     "active": "boolean",
+     "AmountUsd": "number",
+     "companyId": "number",
+     "deleted": "boolean",
+     "metaData": "object",
+     "startedProcessAt": "string",
+     "userId": "number"
+    },
+    "evidence": [
+     "openapi/_original/loopay-openapi-original.json#GET /affiliates/payouts",
+     "openapi/_original/loopay-openapi-original.json#GET /payout/{id}",
+     "openapi/_original/loopay-openapi-original.json#GET /payouts"
+    ]
+   },
+   "mamo": {
+    "segments": [
+     "disbursements"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "number",
+     "identifier": "string",
+     "reason": "string",
+     "name": "string",
+     "amount_formatted": "string",
+     "method": "string",
+     "recipient": "string",
+     "created_at": "string",
+     "status": "string",
+     "currency": "string",
+     "first_name_or_business_name": "string",
+     "last_name": "string",
+     "account": "string",
+     "transfer_method": "string",
+     "amount": "string"
+    },
+    "evidence": [
+     "openapi/_original/mamo-openapi.yml#GET /disbursements/{disbursementId}",
+     "openapi/_original/mamo-openapi.yml#POST /disbursements"
+    ]
+   },
+   "moniepoint": {
+    "segments": [
+     "disbursements"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "requestSuccessful": "boolean",
+     "responseMessage": "string",
+     "responseCode": "string",
+     "responseBody": "object",
+     "title": "string",
+     "batchReference": "string",
+     "narration": "string",
+     "sourceAccountNumber": "string",
+     "onValidationFailure": "string",
+     "notificationInterval": "integer",
+     "transactionList": "array"
+    },
+    "evidence": [
+     "openapi/_original/monnify-disbursements-api-openapi.yml#POST /api/v2/disbursements/bulk"
+    ]
+   },
+   "nala": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "data": "array",
+     "meta": null,
+     "amount": "object",
+     "created_at": "string",
+     "custom_id": "string",
+     "id": "string",
+     "on_behalf_of": "array",
+     "payment_account_id": "string",
+     "purpose": "string",
+     "receipt": "string",
+     "sender": "object",
+     "state": "object",
+     "wallet_id": "string",
+     "payment_account": null
+    },
+    "evidence": [
+     "openapi/_original/nala-rafiki-openapi.yml#GET /payouts",
+     "openapi/_original/nala-rafiki-openapi.yml#GET /payouts/{id}",
+     "openapi/_original/nala-rafiki-openapi.yml#POST /payouts"
+    ]
+   },
+   "nomba": {
+    "segments": [
+     "transfer"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "transactionId": "string",
+     "status": "string",
+     "sourceCurrency": "string",
+     "destinationCurrency": "string",
+     "sourceAmount": "number",
+     "destinationAmount": "number",
+     "rate": "number",
+     "fee": "number",
+     "paymentMethod": "string",
+     "merchantTxRef": "string",
+     "recipient": "object",
+     "createdAt": "string",
+     "settledAt": "string",
+     "rateLockId": "string",
+     "amount": "number",
+     "narration": "string"
+    },
+    "evidence": [
+     "openapi/_original/nomba-global-payout-openapi.yml#GET /v1/global-payout/transfer/{transactionId}",
+     "openapi/_original/nomba-global-payout-openapi.yml#POST /v1/global-payout/transfer"
+    ]
+   },
+   "now-payments": {
+    "segments": [
+     "payout"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "address": "string",
+     "currency": "string",
+     "amount": "number",
+     "status": "string",
+     "hash": "string"
+    },
+    "evidence": [
+     "openapi/_original/openapi.yml#GET /payout/{payout_id}",
+     "openapi/_original/openapi.yml#POST /payout"
+    ]
+   },
+   "open-financial": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "object": "string",
+     "type": "string",
+     "amount": "integer",
+     "debit_account_id": "string",
+     "beneficiary_id": "string",
+     "status": "string",
+     "currency_code": "string",
+     "payment_mode": "string",
+     "payment_remark": "string",
+     "paid_to": "string",
+     "beneficiary_name": "string",
+     "beneficiary_ifsc": "string",
+     "bulk_transfer_id": "string",
+     "otp_attempts": "integer",
+     "metadata": "object",
+     "merchant_reference_id": "string",
+     "transacted_at": "integer",
+     "is_sandbox": "boolean",
+     "created_at": "integer",
+     "bank_reference_number": "string",
+     "async": "boolean",
+     "debit_account_details": "object",
+     "total_individual_transfers": "integer",
+     "total_transfer_amount": "integer",
+     "bulk_reference_id": "string",
+     "updated_at": "integer",
+     "beneficiary_details": "object"
+    },
+    "evidence": [
+     "openapi/_original/open-financial-1-openapi.yml#GET /v1/transfers",
+     "openapi/_original/open-financial-1-openapi.yml#GET /v1/transfers/{transfer_id}",
+     "openapi/_original/open-financial-1-openapi.yml#POST /v1/transfers",
+     "openapi/_original/open-financial-1-openapi.yml#POST /v2/transfers/bulk"
+    ]
+   },
+   "payabli": {
+    "segments": [
+     "transfers",
+     "payouts"
+    ],
+    "operations": [
+     "GET item"
+    ],
+    "properties": {
+     "transferId": "integer",
+     "paypointId": "integer",
+     "batchNumber": "string",
+     "batchCurrency": [
+      "string",
+      "null"
+     ],
+     "batchRecords": [
+      "integer",
+      "null"
+     ],
+     "transferIdentifier": "string",
+     "batchId": "integer",
+     "paypointEntryName": [
+      "string",
+      "null"
+     ],
+     "paypointLegalName": null,
+     "paypointDbaName": null,
+     "paypointLogo": [
+      "string",
+      "null"
+     ],
+     "parentOrgName": [
+      "string",
+      "null"
+     ],
+     "parentOrgId": [
+      "integer",
+      "null"
+     ],
+     "parentOrgEntryName": [
+      "string",
+      "null"
+     ],
+     "parentOrgLogo": [
+      "string",
+      "null"
+     ],
+     "externalPaypointID": [
+      "string",
+      "null"
+     ],
+     "bankAccount": null,
+     "transferDate": "string",
+     "processor": "string",
+     "transferStatus": "integer",
+     "grossAmount": "number",
+     "chargeBackAmount": "number",
+     "returnedAmount": "number",
+     "holdAmount": "number",
+     "releasedAmount": "number",
+     "billingFeesAmount": "number",
+     "thirdPartyPaidAmount": "number",
+     "adjustmentsAmount": "number",
+     "netTransferAmount": "number",
+     "splitAmount": [
+      "number",
+      "null"
+     ],
+     "eventsData": [
+      "array",
+      "null"
+     ],
+     "messages": [
+      "array",
+      "null"
+     ],
+     "IdOut": "integer",
+     "CreatedAt": "string",
+     "Comments": "string",
+     "Vendor": "object",
+     "PaypointDbaname": "string",
+     "PaypointLegalname": "string",
+     "PaypointId": "integer",
+     "Status": "integer",
+     "PaymentId": "string",
+     "TransId": [
+      "string",
+      "null"
+     ],
+     "TransStatus": [
+      "integer",
+      "null"
+     ],
+     "TransStatusDetail": [
+      "string",
+      "null"
+     ],
+     "TransStatusName": [
+      "string",
+      "null"
+     ],
+     "TransStatusCategory": [
+      "string",
+      "null"
+     ],
+     "LastUpdated": "string",
+     "TotalAmount": "number",
+     "NetAmount": "number",
+     "FeeAmount": "number",
+     "Source": "string",
+     "ParentOrgName": "string",
+     "ParentOrgId": "integer",
+     "BatchNumber": "string",
+     "PaymentStatus": "string",
+     "PaymentMethod": "string",
+     "CardToken": [
+      "string",
+      "null"
+     ],
+     "CheckNumber": "string",
+     "CheckData": "object",
+     "PaymentData": "object",
+     "Bills": "array",
+     "Events": "array",
+     "EntryName": "string",
+     "Gateway": "string",
+     "BatchId": "integer",
+     "HasVcardTransactions": "boolean",
+     "IsSameDayACH": "boolean",
+     "ScheduleId": "integer",
+     "SettlementStatus": "string",
+     "SettlementStatusName": [
+      "string",
+      "null"
+     ],
+     "SettlementDate": [
+      "string",
+      "null"
+     ],
+     "RiskFlagged": "boolean",
+     "RiskFlaggedOn": "string",
+     "RiskStatus": "string",
+     "RiskReason": "string",
+     "RiskAction": "string",
+     "RiskActionCode": "integer",
+     "PayoutProgram": "string",
+     "AchTraceNumber": [
+      "string",
+      "null"
+     ],
+     "EntityId": "string"
+    },
+    "evidence": [
+     "openapi/_original/payabli-api-reference-openapi.json#GET /Export/transfers/{entry}",
+     "openapi/_original/payabli-api-reference-openapi.json#GET /Query/payouts/{entry}",
+     "openapi/_original/payabli-api-reference-openapi.json#GET /Query/transfers/{entry}"
+    ]
+   },
+   "paypal": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "payout_batch_id": "string",
+     "batch_status": "string",
+     "time_created": "string",
+     "sender_batch_header": "object",
+     "recipient_type": "string",
+     "amount": "object",
+     "note": "string",
+     "receiver": "string",
+     "sender_item_id": "string",
+     "recipient_wallet": "string",
+     "alternate_notification_method": "object",
+     "notification_language": "string",
+     "application_context": "object",
+     "purpose": "string",
+     "payout_item_id": "string",
+     "transaction_id": "string",
+     "activity_id": "string",
+     "transaction_status": "string",
+     "payout_item_fee": "object",
+     "payout_item": "object",
+     "currency_conversion": "object",
+     "time_processed": "string",
+     "errors": "object",
+     "links": "array"
+    },
+    "evidence": [
+     "openapi/_original/paypal-payouts-openapi-original.yml#GET /v1/payments/payouts/{id}",
+     "openapi/_original/paypal-payouts-openapi-original.yml#POST /v1/payments/payouts"
+    ]
+   },
+   "payrix": {
+    "segments": [
+     "payouts",
+     "disbursements"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "PUT item"
+    ],
+    "properties": {
+     "id": "string",
+     "created": "string",
+     "modified": "string",
+     "creator": null,
+     "modifier": "string",
+     "entity": null,
+     "account": null,
+     "payment": "string",
+     "payout": null,
+     "settlement": null,
+     "statement": null,
+     "description": "string",
+     "secondaryDescriptor": "string",
+     "amount": "integer",
+     "returnedAmount": "integer",
+     "status": null,
+     "fundingStatus": null,
+     "processed": "string",
+     "disbursementEntriesStatus": null,
+     "lastNegativeEntry": null,
+     "lastNegativePendingEntry": null,
+     "lastPositiveReserveEntry": null,
+     "lastPositiveEntry": null,
+     "lastPositivePendingEntry": null,
+     "lastNegativeReserveEntry": null,
+     "currency": null,
+     "expiration": "string",
+     "sameDay": null,
+     "adjustments": "array",
+     "disbursementEntries": "array",
+     "disbursementResults": "array",
+     "entityReturns": "array",
+     "entries": "array",
+     "entryOrigins": "array",
+     "funding": "array",
+     "pendingEntries": "array",
+     "login": null,
+     "billing": null,
+     "payoutFlow": null,
+     "name": "string",
+     "schedule": null,
+     "scheduleFactor": "integer",
+     "start": "integer",
+     "um": null,
+     "minimum": "integer",
+     "maximum": "integer",
+     "float": "integer",
+     "skipOffDays": null,
+     "inactive": null,
+     "frozen": null,
+     "disbursements": "array"
+    },
+    "evidence": [
+     "openapi/_original/payrix-merchant-openapi.yml#DELETE /payouts/{id}",
+     "openapi/_original/payrix-merchant-openapi.yml#GET /disbursements",
+     "openapi/_original/payrix-merchant-openapi.yml#GET /disbursements/{id}",
+     "openapi/_original/payrix-merchant-openapi.yml#GET /payouts",
+     "openapi/_original/payrix-merchant-openapi.yml#GET /payouts/{id}",
+     "openapi/_original/payrix-merchant-openapi.yml#POST /payouts",
+     "openapi/_original/payrix-merchant-openapi.yml#PUT /payouts/{id}",
+     "openapi/_original/payrix-merchant-openapi31json.json#DELETE /payouts/{id}",
+     "openapi/_original/payrix-merchant-openapi31json.json#GET /disbursements",
+     "openapi/_original/payrix-merchant-openapi31json.json#GET /disbursements/{id}",
+     "openapi/_original/payrix-merchant-openapi31json.json#GET /payouts",
+     "openapi/_original/payrix-merchant-openapi31json.json#GET /payouts/{id}"
+    ]
+   },
+   "paystack": {
+    "segments": [
+     "transfer"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "status": "boolean",
+     "message": "string",
+     "data": "object",
+     "source": "string",
+     "amount": "string",
+     "recipient": "string",
+     "reason": "string",
+     "currency": "string",
+     "reference": "string"
+    },
+    "evidence": [
+     "openapi/_original/paystack-openapi-original.yml#GET /transfer",
+     "openapi/_original/paystack-openapi-original.yml#GET /transfer/{code}",
+     "openapi/_original/paystack-openapi-original.yml#POST /transfer",
+     "openapi/_original/paystack-openapi-original.yml#POST /transfer/bulk",
+     "openapi/_original/paystack-transfers-openapi.yml#GET /transfer",
+     "openapi/_original/paystack-transfers-openapi.yml#GET /transfer/{code}",
+     "openapi/_original/paystack-transfers-openapi.yml#POST /transfer",
+     "openapi/_original/paystack-transfers-openapi.yml#POST /transfer/bulk"
+    ]
+   },
+   "quotapath": {
+    "segments": [
+     "payout"
+    ],
+    "operations": [
+     "GET collection"
+    ],
+    "properties": {
+     "date": "string",
+     "deal_date": "string",
+     "deal_id": "integer",
+     "deal_integration_id": "string",
+     "deal_integration_source": "string",
+     "deal_name": "string",
+     "deal_term_start_date": "string",
+     "deal_term_end_date": "string",
+     "deal_term_duration": "number",
+     "deal_uuid": "string",
+     "id": "string",
+     "path_name": "string",
+     "plan_name": "string",
+     "target_user_email": "string",
+     "target_user_name": "string",
+     "updated_ts": "string",
+     "value": "number"
+    },
+    "evidence": [
+     "openapi/_original/quotapath-openapi-original.json#GET /payout/"
+    ]
+   },
+   "ripple-labs": {
+    "segments": [
+     "transfers",
+     "transfer"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "walletId": "string",
+     "vaultId": "string",
+     "createdBy": "string",
+     "createdAt": "string",
+     "updatedAt": "string",
+     "attributes": "object",
+     "status": null,
+     "action": null,
+     "externalId": "string",
+     "correlationId": "string",
+     "asset": "object",
+     "feeAsset": "object",
+     "blockchain": "string",
+     "destinationAddress": "string",
+     "destination": "object",
+     "originAddress": "string",
+     "origin": "object",
+     "qty": "string",
+     "feeQtyLimit": "string",
+     "sequence": "string",
+     "encodedTransaction": "string",
+     "signOnly": "boolean",
+     "config": "object",
+     "freezeInfo": null,
+     "feeQty": "string",
+     "hash": "string",
+     "signature": "string",
+     "transactionType": "string",
+     "reasons": "array",
+     "canonicalSignature": "string",
+     "signedTransaction": "string",
+     "proposedAssetChanges": "array",
+     "confirmedAssetChanges": "array",
+     "expiresAt": "string",
+     "problems": "array",
+     "signingPayloads": "array",
+     "contract": "string",
+     "symbol": "string",
+     "networkFee": "string",
+     "first": "boolean",
+     "last": "boolean",
+     "number": "integer",
+     "numberOfElements": "integer",
+     "size": "integer",
+     "totalElements": "integer",
+     "totalPages": "integer",
+     "sort": "array",
+     "transfer_id": "string",
+     "state": "string",
+     "owner_address": "string",
+     "sender_address": "string",
+     "receiver_address": "string",
+     "amount": "number",
+     "internal_id": "string",
+     "end_to_end_id": "string",
+     "sending_fee": "number",
+     "created_at": "string",
+     "user_info": "array",
+     "labels": "array"
+    },
+    "evidence": [
+     "openapi/_original/ripple-labs-palisade-wallet-openapi-original.yml#POST /v2/vaults/{vaultId}/wallets/{walletId}/transactions/transfer",
+     "openapi/_original/ripple-labs-ripplenet-openapi-original.yml#GET /transfers",
+     "openapi/_original/ripple-labs-ripplenet-openapi-original.yml#GET /transfers/{transfer_id}"
+    ]
+   },
+   "stellar": {
+    "segments": [
+     "disbursements"
+    ],
+    "operations": [
+     "DELETE item",
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "name": "string",
+     "receiver_registration_message_template": "string",
+     "registration_contact_type": "string",
+     "wallet": "object",
+     "asset": "object",
+     "status": "string",
+     "verification_field": "string",
+     "status_history": "array",
+     "file_name": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "total_payments": "integer",
+     "total_payments_sent": "integer",
+     "total_payments_failed": "integer",
+     "total_payments_remaining": "integer",
+     "amount_disbursed": "string",
+     "total_amount": "string",
+     "average_amount": "string"
+    },
+    "evidence": [
+     "openapi/_original/stellar-disbursement-platform-api.yml#DELETE /disbursements/{id}",
+     "openapi/_original/stellar-disbursement-platform-api.yml#GET /disbursements",
+     "openapi/_original/stellar-disbursement-platform-api.yml#GET /disbursements/{id}",
+     "openapi/_original/stellar-disbursement-platform-api.yml#GET /exports/disbursements",
+     "openapi/_original/stellar-disbursement-platform-api.yml#POST /disbursements"
+    ]
+   },
+   "veem": {
+    "segments": [
+     "payout"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "actorInfo": "string",
+     "amount": "object",
+     "attachments": "array",
+     "ccEmails": "array",
+     "claimLink": "string",
+     "clientId": "string",
+     "customerPlatformNamePrefix": "string",
+     "dueDate": "string",
+     "exchangeRate": "object",
+     "exchangeRateQuoteId": "string",
+     "externalInvoiceRefId": "string",
+     "extraInfo": "object",
+     "fundingMethod": "object",
+     "goodFundsPayment": "boolean",
+     "id": "integer",
+     "invoiceExtraInfo": "object",
+     "notes": "string",
+     "partnerAccountId": "integer",
+     "payee": "object",
+     "payeeAccountId": "integer",
+     "payer": "object",
+     "payerAccountId": "integer",
+     "processingMethod": "string",
+     "purposeOfPayment": "string",
+     "purposeOfPaymentDescription": "string",
+     "requestId": "string",
+     "status": "string",
+     "sweepToVBAId": "integer",
+     "sweepToWalletId": "integer",
+     "timeCreated": "string",
+     "fromCryptoWalletId": "integer",
+     "toAddress": "string",
+     "toChain": "string"
+    },
+    "evidence": [
+     "openapi/_original/veem-api-openapi.yml#POST /veem/v1.0/payments/cryptowallet/payout"
+    ]
+   },
+   "vopay": {
+    "segments": [
+     "transfer"
+    ],
+    "operations": [
+     "POST collection"
+    ],
+    "properties": {
+     "Success": "boolean",
+     "ErrorMessage": "string",
+     "TransactionID": "integer",
+     "JournalEntryID": "integer"
+    },
+    "evidence": [
+     "openapi/_original/vopay-account-api-reference.json#POST /partner/account/transfer",
+     "openapi/_original/vopay-client-accounts.json#POST /account/client-accounts/transfer",
+     "openapi/_original/vopay-client-accounts.json#POST /account/client-accounts/wallets/transfer",
+     "openapi/_original/vopay-payment-rails-api-reference.json#POST /journal-entry/transfer"
+    ]
+   },
+   "wise": {
+    "segments": [
+     "transfers"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "targetAccount": "integer",
+     "sourceAccount": "integer",
+     "quoteUuid": "string",
+     "customerTransactionId": "string",
+     "details": "object",
+     "id": "integer",
+     "user": "integer",
+     "quote": [
+      "integer",
+      "null"
+     ],
+     "status": "string",
+     "reference": "string",
+     "rate": "number",
+     "created": "string",
+     "business": [
+      "integer",
+      "null"
+     ],
+     "transferRequest": [
+      "integer",
+      "null"
+     ],
+     "hasActiveIssues": "boolean",
+     "sourceCurrency": "string",
+     "sourceValue": "number",
+     "targetCurrency": "string",
+     "targetValue": "number",
+     "payinSessionId": "string"
+    },
+    "evidence": [
+     "openapi/_original/wise-platform-openapi.yml#GET /v1/transfers",
+     "openapi/_original/wise-platform-openapi.yml#GET /v1/transfers/{transferId}",
+     "openapi/_original/wise-platform-openapi.yml#POST /v1/transfers",
+     "openapi/_original/wise-platform-openapi.yml#POST /v3/profiles/{profileId}/batch-groups/{batchGroupId}/transfers"
+    ]
+   },
+   "worldpay": {
+    "segments": [
+     "payouts",
+     "transfer"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "outcome": "string",
+     "scheme": "object",
+     "receivedAt": "string",
+     "sourceAccountNumber": "string",
+     "targetAccountNumber": "string",
+     "amount": "number",
+     "narrative": "string",
+     "quoteId": "string"
+    },
+    "evidence": [
+     "openapi/_original/worldpay-card-payouts-openapi.yaml#GET /payouts/{resource}",
+     "openapi/_original/worldpay-transfers-openapi.yaml#POST /accounts/transfer"
+    ]
+   },
+   "xendit": {
+    "segments": [
+     "payouts"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "string",
+     "reference_id": "string",
+     "business_id": "string",
+     "channel_code": "string",
+     "amount": "number",
+     "currency": "string",
+     "status": "string",
+     "created": "string",
+     "updated": "string",
+     "channel_properties": "object",
+     "description": "string",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/xendit-openapi.yml#GET /v3/payouts/{payout_id}",
+     "openapi/_original/xendit-openapi.yml#POST /v3/payouts"
+    ]
+   },
+   "xflow": {
+    "segments": [
+     "transfers",
+     "payouts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection",
+     "POST item"
+    ],
+    "properties": {
+     "amount": "string",
+     "arrival_time": "integer",
+     "automatic": "boolean",
+     "created": "integer",
+     "currency": "string",
+     "id": "string",
+     "livemode": "boolean",
+     "metadata": "object",
+     "object": "string",
+     "payment_method": "string",
+     "payment_method_details": "object",
+     "payout_confirmation": "string",
+     "statement_descriptor": "string",
+     "status": "string",
+     "to": "object",
+     "description": "string",
+     "from": "object",
+     "linked_id": "string",
+     "linked_object": "string",
+     "type": "string"
+    },
+    "evidence": [
+     "openapi/_original/xflow-openapi-original.yml#GET /v1/payouts",
+     "openapi/_original/xflow-openapi-original.yml#GET /v1/payouts/{payout}",
+     "openapi/_original/xflow-openapi-original.yml#GET /v1/transfers",
+     "openapi/_original/xflow-openapi-original.yml#GET /v1/transfers/{transfer}",
+     "openapi/_original/xflow-openapi-original.yml#POST /v1/payouts/{payout}",
+     "openapi/_original/xflow-openapi-original.yml#POST /v1/transfers",
+     "openapi/_original/xflow-openapi-original.yml#POST /v1/transfers/{transfer}"
+    ]
+   },
+   "zai": {
+    "segments": [
+     "disbursements",
+     "transfer"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "PATCH collection"
+    ],
+    "properties": {
+     "id": "string",
+     "reference_id": "string",
+     "amount": "integer",
+     "currency": "string",
+     "batch_id": "string",
+     "cuscal_payment_transaction_id": "string",
+     "created_at": "string",
+     "updated_at": "string",
+     "state": "string",
+     "to": "string",
+     "bank_name": "string",
+     "bank_account_name": "string",
+     "bank_account_number": "string",
+     "bank_routing_number": "string",
+     "npp_payout_state": "string",
+     "account_name": "string",
+     "biller_name": "string",
+     "biller_code": "string",
+     "crn": "string",
+     "links": "object",
+     "description": "string",
+     "type": "string",
+     "type_method": "string",
+     "user_id": "string",
+     "user_name": "string",
+     "account_id": "string",
+     "account_type": "string",
+     "sub_wallets_id": "string",
+     "sub_wallet_name": "string",
+     "debit_credit": "string",
+     "marketplace": "object",
+     "related": "object",
+     "source": "string",
+     "destination": "string"
+    },
+    "evidence": [
+     "openapi/_original/zai-assembly-api.json#GET /disbursements",
+     "openapi/_original/zai-assembly-api.json#GET /disbursements/{id}",
+     "openapi/_original/zai-assembly-api.json#PATCH /sub_wallets/transfer"
+    ]
+   },
+   "zero-hash": {
+    "segments": [
+     "transfers",
+     "payouts"
+    ],
+    "operations": [
+     "GET collection",
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "id": "number",
+     "created_at": "string",
+     "updated_at": "string",
+     "status": "string",
+     "from_participant_code": "string",
+     "from_account_group": "string",
+     "from_account_label": "string",
+     "to_participant_code": "string",
+     "to_account_group": "string",
+     "to_account_label": "string",
+     "asset": "string",
+     "amount": "string",
+     "movement_id": "string",
+     "client_transfer_id": "string",
+     "admin_transfer": "boolean",
+     "parent_link_id": "string",
+     "parent_link_id_source": "string",
+     "prefunded": "boolean",
+     "payout_id": "string",
+     "idempotency_key": "string",
+     "sub_status": "string",
+     "previous_sub_status": "string",
+     "failure_reason": "string",
+     "resources": "object",
+     "account_model": "string",
+     "validate": "boolean",
+     "payor": "object",
+     "beneficiary": "object",
+     "payment": "object",
+     "metadata": "object"
+    },
+    "evidence": [
+     "openapi/_original/zero-hash-api-openapi.json#GET /payouts",
+     "openapi/_original/zero-hash-api-openapi.json#GET /transfers",
+     "openapi/_original/zero-hash-api-openapi.json#GET /transfers/{id}",
+     "openapi/_original/zero-hash-api-openapi.json#POST /payouts",
+     "openapi/_original/zero-hash-api-openapi.json#POST /transfers",
+     "openapi/_original/zero-hash-api-openapi.yml#GET /payouts",
+     "openapi/_original/zero-hash-api-openapi.yml#GET /transfers",
+     "openapi/_original/zero-hash-api-openapi.yml#GET /transfers/{id}",
+     "openapi/_original/zero-hash-api-openapi.yml#POST /payouts",
+     "openapi/_original/zero-hash-api-openapi.yml#POST /transfers"
+    ]
+   },
+   "ziina": {
+    "segments": [
+     "transfer"
+    ],
+    "operations": [
+     "GET item",
+     "POST collection"
+    ],
+    "properties": {
+     "operation_id": "string",
+     "to_account_ids": "array",
+     "to_ziinames": "array",
+     "amount": "number",
+     "currency_code": "string",
+     "message": "string"
+    },
+    "evidence": [
+     "openapi/_original/ziina-openapi.yml#GET /transfer/{id}",
+     "openapi/_original/ziina-openapi.yml#POST /transfer"
+    ]
+   }
+  }
+ },
+ "naming": {
+  "path_segment": {
+   "lower": [
+    "aeropay",
+    "afriex",
+    "airtm",
+    "airwallex",
+    "augustus",
+    "aza-finance",
+    "azupay",
+    "balad-corp",
+    "bitpay",
+    "bitso",
+    "bridge",
+    "bvnk",
+    "bybe",
+    "cadana",
+    "caliza",
+    "capitalist",
+    "cashfree",
+    "cellulant",
+    "chariot",
+    "chimoney",
+    "coinflow",
+    "connexpay",
+    "cryptomus",
+    "currencycloud",
+    "cybersource",
+    "d-local",
+    "dailypay",
+    "dlocal",
+    "doku",
+    "due",
+    "ebanx",
+    "euronet",
+    "famous",
+    "fin",
+    "fincra",
+    "finix",
+    "fintary",
+    "fipto",
+    "firstpromoter",
+    "flutterwave",
+    "genome",
+    "goodstack",
+    "hevn-inc",
+    "ibanfirst",
+    "impact",
+    "interchecks",
+    "justifi",
+    "korapay",
+    "kushki",
+    "lean-technologies",
+    "lianlian-global",
+    "lightspark",
+    "loopay",
+    "mamo",
+    "mercoa",
+    "moniepoint",
+    "nala",
+    "nomba",
+    "now-payments",
+    "open-financial",
+    "opennode",
+    "pagseguro",
+    "papaya-global",
+    "payabli",
+    "paymob",
+    "paypal",
+    "payrix",
+    "paystack",
+    "paytm",
+    "quotapath",
+    "razorpay",
+    "ripple-labs",
+    "routable",
+    "runa",
+    "sila-money",
+    "stablesea",
+    "stellar",
+    "swift",
+    "tabapay",
+    "tesser",
+    "thunes",
+    "tremendous",
+    "trustly",
+    "uzum",
+    "veem",
+    "volt-io",
+    "vopay",
+    "western-union",
+    "wise",
+    "worldpay",
+    "xendit",
+    "xflow",
+    "zai",
+    "zero-hash",
+    "ziina"
+   ],
+   "kebab-case": [
+    "afriex",
+    "airtm",
+    "balad-corp",
+    "bvnk",
+    "cadana",
+    "caliza",
+    "cashfree",
+    "cellulant",
+    "chimoney",
+    "coinflow",
+    "connexpay",
+    "cryptomus",
+    "cybersource",
+    "d-local",
+    "dlocal",
+    "doku",
+    "euronet",
+    "famous",
+    "fin",
+    "fincra",
+    "fintary",
+    "fipto",
+    "flutterwave",
+    "genome",
+    "goodstack",
+    "hevn-inc",
+    "ibanfirst",
+    "impact",
+    "interchecks",
+    "korapay",
+    "lean-technologies",
+    "lianlian-global",
+    "lightspark",
+    "loopay",
+    "mercoa",
+    "moniepoint",
+    "nala",
+    "nomba",
+    "now-payments",
+    "open-financial",
+    "opennode",
+    "pagseguro",
+    "payabli",
+    "paymob",
+    "paypal",
+    "quotapath",
+    "ripple-labs",
+    "stablesea",
+    "stellar",
+    "tesser",
+    "thunes",
+    "uzum",
+    "veem",
+    "volt-io",
+    "vopay",
+    "wise",
+    "zero-hash"
+   ],
+   "snake_case": [
+    "airwallex",
+    "augustus",
+    "aza-finance",
+    "bitso",
+    "bridge",
+    "bybe",
+    "cashfree",
+    "chariot",
+    "currencycloud",
+    "dlocal",
+    "due",
+    "ebanx",
+    "euronet",
+    "famous",
+    "finix",
+    "firstpromoter",
+    "hevn-inc",
+    "justifi",
+    "lianlian-global",
+    "lightspark",
+    "mamo",
+    "open-financial",
+    "payabli",
+    "paymob",
+    "paystack",
+    "ripple-labs",
+    "routable",
+    "sila-money",
+    "stablesea",
+    "stellar",
+    "swift",
+    "thunes",
+    "tremendous",
+    "uzum",
+    "wise",
+    "worldpay",
+    "xendit",
+    "xflow",
+    "zai",
+    "zero-hash",
+    "ziina"
+   ],
+   "camelCase": [
+    "aeropay",
+    "azupay",
+    "bitpay",
+    "cadana",
+    "caliza",
+    "cashfree",
+    "coinflow",
+    "connexpay",
+    "cybersource",
+    "ebanx",
+    "ibanfirst",
+    "impact",
+    "kushki",
+    "lianlian-global",
+    "loopay",
+    "mercoa",
+    "payabli",
+    "payrix",
+    "paytm",
+    "trustly",
+    "uzum",
+    "veem",
+    "wise",
+    "worldpay"
+   ],
+   "other": [
+    "airtm",
+    "bridge",
+    "caliza",
+    "connexpay",
+    "ebanx",
+    "hevn-inc",
+    "ibanfirst",
+    "lean-technologies",
+    "lianlian-global",
+    "nuvei",
+    "payrix",
+    "ripple-labs",
+    "stellar",
+    "tabapay",
+    "thunes",
+    "vopay",
+    "wise",
+    "worldpay",
+    "xendit"
+   ],
+   "PascalCase": [
+    "aeropay",
+    "connexpay",
+    "goodstack",
+    "ibanfirst",
+    "impact",
+    "lianlian-global",
+    "payabli",
+    "payrix",
+    "thunes",
+    "western-union"
+   ]
+  },
+  "query_param": {
+   "lower": [
+    "aeropay",
+    "afriex",
+    "airtm",
+    "augustus",
+    "aza-finance",
+    "azupay",
+    "bitpay",
+    "bitso",
+    "bridge",
+    "bvnk",
+    "bybe",
+    "cadana",
+    "caliza",
+    "capitalist",
+    "cashfree",
+    "chariot",
+    "chimoney",
+    "coinflow",
+    "cryptomus",
+    "currencycloud",
+    "cybersource",
+    "d-local",
+    "dailypay",
+    "dlocal",
+    "due",
+    "euronet",
+    "famous",
+    "fin",
+    "fincra",
+    "finix",
+    "fintary",
+    "fipto",
+    "firstpromoter",
+    "flutterwave",
+    "goodstack",
+    "hevn-inc",
+    "ibanfirst",
+    "impact",
+    "interchecks",
+    "justifi",
+    "korapay",
+    "lean-technologies",
+    "lianlian-global",
+    "lightspark",
+    "loopay",
+    "mamo",
+    "moniepoint",
+    "nala",
+    "nomba",
+    "now-payments",
+    "open-financial",
+    "opennode",
+    "papaya-global",
+    "payabli",
+    "paypal",
+    "payrix",
+    "paystack",
+    "paytm",
+    "quotapath",
+    "razorpay",
+    "ripple-labs",
+    "routable",
+    "runa",
+    "stellar",
+    "tabapay",
+    "tesser",
+    "tremendous",
+    "trustly",
+    "veem",
+    "volt-io",
+    "vopay",
+    "wise",
+    "worldpay",
+    "xendit",
+    "xflow",
+    "zai",
+    "zero-hash"
+   ],
+   "snake_case": [
+    "augustus",
+    "aza-finance",
+    "balad-corp",
+    "bridge",
+    "bybe",
+    "cadana",
+    "cashfree",
+    "cellulant",
+    "chariot",
+    "currencycloud",
+    "d-local",
+    "euronet",
+    "famous",
+    "fin",
+    "finix",
+    "fintary",
+    "fipto",
+    "firstpromoter",
+    "hevn-inc",
+    "ibanfirst",
+    "impact",
+    "justifi",
+    "korapay",
+    "lean-technologies",
+    "lianlian-global",
+    "mamo",
+    "nala",
+    "now-payments",
+    "open-financial",
+    "opennode",
+    "papaya-global",
+    "paypal",
+    "paystack",
+    "quotapath",
+    "ripple-labs",
+    "routable",
+    "runa",
+    "stellar",
+    "tesser",
+    "tremendous",
+    "wise",
+    "xendit",
+    "xflow",
+    "zai",
+    "zero-hash"
+   ],
+   "camelCase": [
+    "aeropay",
+    "afriex",
+    "airtm",
+    "azupay",
+    "bitpay",
+    "bvnk",
+    "cadana",
+    "caliza",
+    "cashfree",
+    "chariot",
+    "chimoney",
+    "coinflow",
+    "connexpay",
+    "cybersource",
+    "due",
+    "euronet",
+    "fincra",
+    "finix",
+    "fintary",
+    "goodstack",
+    "hevn-inc",
+    "ibanfirst",
+    "impact",
+    "interchecks",
+    "korapay",
+    "lean-technologies",
+    "lianlian-global",
+    "lightspark",
+    "loopay",
+    "moniepoint",
+    "nomba",
+    "now-payments",
+    "payabli",
+    "paystack",
+    "paytm",
+    "ripple-labs",
+    "tabapay",
+    "trustly",
+    "uzum",
+    "veem",
+    "volt-io",
+    "wise",
+    "worldpay"
+   ],
+   "other": [
+    "augustus",
+    "chariot",
+    "currencycloud",
+    "dailypay",
+    "finix",
+    "fintary",
+    "firstpromoter",
+    "goodstack",
+    "impact",
+    "lianlian-global",
+    "payrix",
+    "razorpay",
+    "ripple-labs",
+    "trustly",
+    "volt-io",
+    "vopay",
+    "xflow",
+    "zero-hash"
+   ],
+   "PascalCase": [
+    "impact",
+    "lean-technologies",
+    "payabli",
+    "tabapay",
+    "vopay"
+   ],
+   "kebab-case": [
+    "ripple-labs"
+   ]
+  },
+  "path_param": {
+   "lower": [
+    "airtm",
+    "airwallex",
+    "augustus",
+    "bitpay",
+    "bitso",
+    "bridge",
+    "bvnk",
+    "bybe",
+    "caliza",
+    "chariot",
+    "coinflow",
+    "connexpay",
+    "currencycloud",
+    "cybersource",
+    "due",
+    "euronet",
+    "famous",
+    "fincra",
+    "fintary",
+    "firstpromoter",
+    "flutterwave",
+    "goodstack",
+    "hevn-inc",
+    "ibanfirst",
+    "impact",
+    "interchecks",
+    "justifi",
+    "korapay",
+    "lianlian-global",
+    "lightspark",
+    "loopay",
+    "mamo",
+    "moniepoint",
+    "nala",
+    "nomba",
+    "open-financial",
+    "opennode",
+    "pagseguro",
+    "papaya-global",
+    "payabli",
+    "paypal",
+    "payrix",
+    "paystack",
+    "quotapath",
+    "razorpay",
+    "ripple-labs",
+    "routable",
+    "stellar",
+    "swift",
+    "tesser",
+    "thunes",
+    "tremendous",
+    "volt-io",
+    "wise",
+    "worldpay",
+    "xflow",
+    "zai",
+    "zero-hash",
+    "ziina"
+   ],
+   "camelCase": [
+    "aeropay",
+    "afriex",
+    "airtm",
+    "azupay",
+    "balad-corp",
+    "bitpay",
+    "bridge",
+    "bvnk",
+    "cadana",
+    "caliza",
+    "capitalist",
+    "chariot",
+    "chimoney",
+    "coinflow",
+    "connexpay",
+    "currencycloud",
+    "cybersource",
+    "due",
+    "euronet",
+    "fincra",
+    "fintary",
+    "goodstack",
+    "ibanfirst",
+    "impact",
+    "korapay",
+    "kushki",
+    "lean-technologies",
+    "lianlian-global",
+    "lightspark",
+    "loopay",
+    "mamo",
+    "mercoa",
+    "moniepoint",
+    "nala",
+    "nomba",
+    "payabli",
+    "payrix",
+    "ripple-labs",
+    "runa",
+    "tesser",
+    "trustly",
+    "uzum",
+    "veem",
+    "volt-io",
+    "western-union",
+    "wise",
+    "worldpay"
+   ],
+   "snake_case": [
+    "balad-corp",
+    "bridge",
+    "bybe",
+    "cadana",
+    "cashfree",
+    "currencycloud",
+    "d-local",
+    "dailypay",
+    "dlocal",
+    "famous",
+    "fin",
+    "finix",
+    "fipto",
+    "firstpromoter",
+    "hevn-inc",
+    "impact",
+    "interchecks",
+    "justifi",
+    "lean-technologies",
+    "lianlian-global",
+    "mamo",
+    "now-payments",
+    "open-financial",
+    "pagseguro",
+    "papaya-global",
+    "paymob",
+    "paypal",
+    "paystack",
+    "quotapath",
+    "ripple-labs",
+    "stablesea",
+    "stellar",
+    "swift",
+    "thunes",
+    "uzum",
+    "xendit",
+    "xflow",
+    "zai",
+    "zero-hash"
+   ],
+   "PascalCase": [
+    "aza-finance",
+    "connexpay",
+    "impact",
+    "lean-technologies",
+    "lianlian-global",
+    "payabli",
+    "payrix",
+    "tabapay"
+   ],
+   "other": [
+    "aza-finance",
+    "connexpay",
+    "impact",
+    "open-financial"
+   ],
+   "kebab-case": [
+    "ripple-labs"
+   ]
+  },
+  "pagination_param": {
+   "page": [
+    "aeropay",
+    "afriex",
+    "airtm",
+    "aza-finance",
+    "bridge",
+    "bybe",
+    "cadana",
+    "caliza",
+    "coinflow",
+    "currencycloud",
+    "euronet",
+    "famous",
+    "fin",
+    "fincra",
+    "fintary",
+    "firstpromoter",
+    "flutterwave",
+    "goodstack",
+    "ibanfirst",
+    "impact",
+    "korapay",
+    "lean-technologies",
+    "lianlian-global",
+    "loopay",
+    "mamo",
+    "moniepoint",
+    "nomba",
+    "now-payments",
+    "opennode",
+    "payabli",
+    "paypal",
+    "paystack",
+    "ripple-labs",
+    "runa",
+    "stellar",
+    "tesser",
+    "volt-io",
+    "worldpay",
+    "zai",
+    "zero-hash"
+   ],
+   "limit": [
+    "afriex",
+    "augustus",
+    "bitpay",
+    "bitso",
+    "bridge",
+    "bybe",
+    "cadana",
+    "chariot",
+    "chimoney",
+    "coinflow",
+    "cybersource",
+    "due",
+    "fin",
+    "finix",
+    "fintary",
+    "flutterwave",
+    "hevn-inc",
+    "impact",
+    "justifi",
+    "korapay",
+    "lightspark",
+    "now-payments",
+    "quotapath",
+    "routable",
+    "stellar",
+    "tesser",
+    "tremendous",
+    "volt-io",
+    "vopay",
+    "wise",
+    "xendit",
+    "xflow",
+    "zai",
+    "zero-hash"
+   ],
+   "page_size": [
+    "balad-corp",
+    "bridge",
+    "bvnk",
+    "coinflow",
+    "connexpay",
+    "euronet",
+    "finix",
+    "fintary",
+    "fipto",
+    "goodstack",
+    "impact",
+    "lean-technologies",
+    "lianlian-global",
+    "moniepoint",
+    "nomba",
+    "payabli",
+    "paypal",
+    "ripple-labs",
+    "stellar",
+    "veem",
+    "wise",
+    "worldpay",
+    "zero-hash"
+   ],
+   "offset": [
+    "bitpay",
+    "bvnk",
+    "cybersource",
+    "finix",
+    "hevn-inc",
+    "impact",
+    "quotapath",
+    "stellar",
+    "tremendous",
+    "vopay",
+    "wise",
+    "zai",
+    "zero-hash"
+   ],
+   "per_page": [
+    "aeropay",
+    "airtm",
+    "currencycloud",
+    "euronet",
+    "famous",
+    "fin",
+    "fincra",
+    "firstpromoter",
+    "ibanfirst",
+    "mamo",
+    "paystack",
+    "runa"
+   ],
+   "cursor": [
+    "augustus",
+    "bridge",
+    "cadana",
+    "chariot",
+    "cryptomus",
+    "goodstack",
+    "hevn-inc",
+    "lightspark",
+    "stellar",
+    "zero-hash"
+   ],
+   "size": [
+    "aeropay",
+    "caliza",
+    "lean-technologies",
+    "moniepoint",
+    "ripple-labs",
+    "wise",
+    "worldpay",
+    "zai",
+    "zero-hash"
+   ],
+   "starting_after": [
+    "bridge",
+    "routable",
+    "xflow"
+   ],
+   "next": [
+    "cadana",
+    "due",
+    "paystack"
+   ],
+   "page_token": [
+    "chariot",
+    "ripple-labs",
+    "zero-hash"
+   ],
+   "skip": [
+    "chimoney",
+    "papaya-global",
+    "razorpay"
+   ],
+   "count": [
+    "goodstack",
+    "razorpay",
+    "trustly"
+   ],
+   "before": [
+    "airtm",
+    "ripple-labs"
+   ],
+   "after": [
+    "airtm",
+    "ripple-labs"
+   ],
+   "start": [
+    "papaya-global"
+   ]
+  },
+  "property": {
+   "lower": [
+    "airtm",
+    "augustus",
+    "aza-finance",
+    "bitpay",
+    "bridge",
+    "cadana",
+    "caliza",
+    "cashfree",
+    "chariot",
+    "chimoney",
+    "coinflow",
+    "connexpay",
+    "cryptomus",
+    "currencycloud",
+    "cybersource",
+    "d-local",
+    "dailypay",
+    "dlocal",
+    "due",
+    "euronet",
+    "fin",
+    "fincra",
+    "finix",
+    "fintary",
+    "fipto",
+    "firstpromoter",
+    "genome",
+    "hevn-inc",
+    "interchecks",
+    "justifi",
+    "korapay",
+    "lean-technologies",
+    "lianlian-global",
+    "loopay",
+    "mamo",
+    "moniepoint",
+    "nala",
+    "nomba",
+    "now-payments",
+    "open-financial",
+    "papaya-global",
+    "payabli",
+    "paypal",
+    "payrix",
+    "paystack",
+    "quotapath",
+    "ripple-labs",
+    "stellar",
+    "tesser",
+    "veem",
+    "volt-io",
+    "wise",
+    "worldpay",
+    "xendit",
+    "xflow",
+    "zai",
+    "zero-hash",
+    "ziina"
+   ],
+   "snake_case": [
+    "airtm",
+    "augustus",
+    "aza-finance",
+    "bridge",
+    "cashfree",
+    "chariot",
+    "chimoney",
+    "cryptomus",
+    "currencycloud",
+    "d-local",
+    "dlocal",
+    "fin",
+    "finix",
+    "fipto",
+    "firstpromoter",
+    "interchecks",
+    "justifi",
+    "lean-technologies",
+    "lianlian-global",
+    "mamo",
+    "nala",
+    "open-financial",
+    "papaya-global",
+    "paypal",
+    "quotapath",
+    "ripple-labs",
+    "stellar",
+    "tesser",
+    "xendit",
+    "xflow",
+    "zai",
+    "zero-hash",
+    "ziina"
+   ],
+   "camelCase": [
+    "airtm",
+    "bitpay",
+    "cadana",
+    "caliza",
+    "chimoney",
+    "coinflow",
+    "connexpay",
+    "cybersource",
+    "due",
+    "euronet",
+    "fincra",
+    "fintary",
+    "hevn-inc",
+    "lianlian-global",
+    "loopay",
+    "moniepoint",
+    "nomba",
+    "payabli",
+    "payrix",
+    "ripple-labs",
+    "veem",
+    "volt-io",
+    "wise",
+    "worldpay"
+   ],
+   "PascalCase": [
+    "connexpay",
+    "lean-technologies",
+    "lianlian-global",
+    "loopay",
+    "payabli",
+    "vopay"
+   ],
+   "other": [
+    "cybersource",
+    "finix",
+    "lianlian-global"
+   ]
+  }
+ }
+}

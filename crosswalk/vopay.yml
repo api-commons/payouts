@@ -1,0 +1,24 @@
+provider: vopay
+apis_io: https://apis.io/providers/vopay/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - recipients
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vopay-payment-method-api-reference.json#GET /paypal/recipients
+    - openapi/_original/vopay-payment-method-api-reference.json#GET /venmo/recipients
+    - openapi/_original/vopay-payment-method-api-reference.json#GET /zelle/recipients
+  payout:
+    path_segment:
+    - transfer
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vopay-account-api-reference.json#POST /partner/account/transfer
+    - openapi/_original/vopay-client-accounts.json#POST /account/client-accounts/transfer
+    - openapi/_original/vopay-client-accounts.json#POST /account/client-accounts/wallets/transfer
+    - openapi/_original/vopay-payment-rails-api-reference.json#POST /journal-entry/transfer

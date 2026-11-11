@@ -1,0 +1,15 @@
+provider: worldpay
+apis_io: https://apis.io/providers/worldpay/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payouts
+    - transfer
+    properties:
+      amount: amount
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/worldpay-card-payouts-openapi.yaml#GET /payouts/{resource}
+    - openapi/_original/worldpay-transfers-openapi.yaml#POST /accounts/transfer

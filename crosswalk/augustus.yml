@@ -1,0 +1,38 @@
+provider: augustus
+apis_io: https://apis.io/providers/augustus/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - counterparties
+    properties:
+      id: id
+      entity_type:
+      - type
+      - entity_type
+      name: name
+      status: status
+      email: email
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/augustus-openapi.json#GET /v1/counterparties
+    - openapi/_original/augustus-openapi.json#GET /v1/counterparties/{id}
+    - openapi/_original/augustus-openapi.json#POST /v1/counterparties
+    - openapi/_original/augustus-openapi.json#POST /v1/counterparties/{id}
+  payout:
+    path_segment:
+    - payouts
+    properties:
+      status: status
+      amount: amount
+      id: id
+      currency: currency
+      method:
+      - type
+      - rail
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/augustus-openapi.json#GET /v1/payouts
+    - openapi/_original/augustus-openapi.json#GET /v1/payouts/{id}
+    - openapi/_original/augustus-openapi.json#POST /v1/payouts

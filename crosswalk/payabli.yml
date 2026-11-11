@@ -1,0 +1,21 @@
+provider: payabli
+apis_io: https://apis.io/providers/payabli/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - transfers
+    - payouts
+    properties:
+      status:
+      - transferStatus
+      - Status
+      id: transferId
+      created_at: CreatedAt
+      method: PaymentMethod
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/payabli-api-reference-openapi.json#GET /Export/transfers/{entry}
+    - openapi/_original/payabli-api-reference-openapi.json#GET /Query/payouts/{entry}
+    - openapi/_original/payabli-api-reference-openapi.json#GET /Query/transfers/{entry}

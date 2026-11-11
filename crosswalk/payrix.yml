@@ -1,0 +1,23 @@
+provider: payrix
+apis_io: https://apis.io/providers/payrix/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payouts
+    - disbursements
+    properties:
+      status: status
+      amount: amount
+      id: id
+      created_at: created
+      currency: currency
+      reference: description
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/payrix-merchant-openapi.yml#DELETE /payouts/{id}
+    - openapi/_original/payrix-merchant-openapi.yml#GET /disbursements
+    - openapi/_original/payrix-merchant-openapi.yml#GET /disbursements/{id}
+    - openapi/_original/payrix-merchant-openapi.yml#GET /payouts
+    - openapi/_original/payrix-merchant-openapi.yml#GET /payouts/{id}

@@ -1,0 +1,22 @@
+provider: airwallex
+apis_io: https://apis.io/providers/airwallex/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - beneficiaries
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/airwallex-openapi.yml#GET /api/v1/beneficiaries
+    - openapi/_original/airwallex-openapi.yml#GET /api/v1/beneficiaries/{id}
+  payout:
+    path_segment:
+    - payouts
+    - transfers
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/airwallex-openapi.yml#GET /api/v1/payouts/{id}
+    - openapi/_original/airwallex-openapi.yml#GET /api/v1/transfers/{id}

@@ -1,0 +1,16 @@
+provider: d-local
+apis_io: https://apis.io/providers/d-local/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - transfers
+    properties:
+      amount: amount
+      currency: currency
+      reference: description
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/d-local-platforms-api-openapi.yml#GET /v2/transfers/{transfer_id}
+    - openapi/_original/d-local-platforms-api-openapi.yml#POST /v2/transfers

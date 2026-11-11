@@ -1,0 +1,23 @@
+provider: paystack
+apis_io: https://apis.io/providers/paystack/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - transfer
+    properties:
+      status: status
+      amount: amount
+      currency: currency
+      reference:
+      - reason
+      - reference
+      beneficiary_id: recipient
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/paystack-openapi-original.yml#GET /transfer
+    - openapi/_original/paystack-openapi-original.yml#GET /transfer/{code}
+    - openapi/_original/paystack-openapi-original.yml#POST /transfer
+    - openapi/_original/paystack-openapi-original.yml#POST /transfer/bulk
+    - openapi/_original/paystack-transfers-openapi.yml#GET /transfer

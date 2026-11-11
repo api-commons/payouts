@@ -1,0 +1,15 @@
+provider: veem
+apis_io: https://apis.io/providers/veem/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payout
+    properties:
+      status: status
+      amount: amount
+      id: id
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/veem-api-openapi.yml#POST /veem/v1.0/payments/cryptowallet/payout

@@ -1,0 +1,20 @@
+provider: fincra
+apis_io: https://apis.io/providers/fincra/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payouts
+    properties:
+      status: status
+      amount: amount
+      currency: sourceCurrency
+      reference:
+      - reference
+      - description
+      beneficiary_id: beneficiary
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/fincra-openapi.yml#GET /disbursements/payouts
+    - openapi/_original/fincra-openapi.yml#POST /disbursements/payouts

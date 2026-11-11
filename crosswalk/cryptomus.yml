@@ -1,0 +1,22 @@
+provider: cryptomus
+apis_io: https://apis.io/providers/cryptomus/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payout
+    properties:
+      status:
+      - state
+      - status
+      amount: amount
+      id: uuid
+      created_at: created_at
+      currency: currency
+      reference: memo
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/openapi.yml#POST /payout
+    - openapi/_original/openapi.yml#POST /test-webhook/payout

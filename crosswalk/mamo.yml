@@ -1,0 +1,36 @@
+provider: mamo
+apis_io: https://apis.io/providers/mamo/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - recipients
+    properties:
+      entity_type: recipient_type
+      name: name
+      created_at: created_at
+      email: email
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/mamo-openapi.yml#DELETE /accounts/recipients/{recipientIdentifier}
+    - openapi/_original/mamo-openapi.yml#GET /accounts/recipients
+    - openapi/_original/mamo-openapi.yml#GET /accounts/recipients/{recipientIdentifier}
+    - openapi/_original/mamo-openapi.yml#PATCH /accounts/recipients/{recipientIdentifier}
+    - openapi/_original/mamo-openapi.yml#POST /accounts/recipients
+  payout:
+    path_segment:
+    - disbursements
+    properties:
+      status: status
+      amount: amount
+      id: id
+      created_at: created_at
+      currency: currency
+      reference: reason
+      method: method
+      beneficiary_id: recipient
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/mamo-openapi.yml#GET /disbursements/{disbursementId}
+    - openapi/_original/mamo-openapi.yml#POST /disbursements

@@ -1,0 +1,23 @@
+provider: dlocal
+apis_io: https://apis.io/providers/dlocal/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payouts
+    - transfers
+    properties:
+      status: status
+      amount: amount
+      id: id
+      created_at: created_date
+      currency: currency
+      reference: description
+      beneficiary_id: beneficiary
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/dlocal-payouts-openapi.yml#GET /payouts/{payout_id}
+    - openapi/_original/dlocal-payouts-openapi.yml#POST /payouts
+    - openapi/_original/dlocal-platforms-openapi.yml#GET /transfers/{transfer_id}
+    - openapi/_original/dlocal-platforms-openapi.yml#POST /transfers

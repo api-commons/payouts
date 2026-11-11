@@ -1,0 +1,19 @@
+provider: famous
+apis_io: https://apis.io/providers/famous/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  beneficiary:
+    path_segment:
+    - recipients
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/famous-spring-api-swagger.json#GET /seller/v1/messages/recipients
+  payout:
+    path_segment:
+    - payouts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/famous-spring-api-swagger.json#GET /seller/v1/payouts

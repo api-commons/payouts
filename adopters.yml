@@ -1,0 +1,333 @@
+context: payouts
+generated: '2026-11-11'
+adopters:
+- provider: airtm
+  apis_io: https://apis.io/providers/airtm/
+  crosswalk: crosswalk/airtm.yml
+  concepts:
+  - payout
+- provider: airwallex
+  apis_io: https://apis.io/providers/airwallex/
+  crosswalk: crosswalk/airwallex.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: augustus
+  apis_io: https://apis.io/providers/augustus/
+  crosswalk: crosswalk/augustus.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: aza-finance
+  apis_io: https://apis.io/providers/aza-finance/
+  crosswalk: crosswalk/aza-finance.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: bitpay
+  apis_io: https://apis.io/providers/bitpay/
+  crosswalk: crosswalk/bitpay.yml
+  concepts:
+  - payout
+- provider: bridge
+  apis_io: https://apis.io/providers/bridge/
+  crosswalk: crosswalk/bridge.yml
+  concepts:
+  - payout
+- provider: cadana
+  apis_io: https://apis.io/providers/cadana/
+  crosswalk: crosswalk/cadana.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: caliza
+  apis_io: https://apis.io/providers/caliza/
+  crosswalk: crosswalk/caliza.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: cashfree
+  apis_io: https://apis.io/providers/cashfree/
+  crosswalk: crosswalk/cashfree.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: chariot
+  apis_io: https://apis.io/providers/chariot/
+  crosswalk: crosswalk/chariot.yml
+  concepts:
+  - payout
+- provider: chimoney
+  apis_io: https://apis.io/providers/chimoney/
+  crosswalk: crosswalk/chimoney.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: coinflow
+  apis_io: https://apis.io/providers/coinflow/
+  crosswalk: crosswalk/coinflow.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: connexpay
+  apis_io: https://apis.io/providers/connexpay/
+  crosswalk: crosswalk/connexpay.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: cryptomus
+  apis_io: https://apis.io/providers/cryptomus/
+  crosswalk: crosswalk/cryptomus.yml
+  concepts:
+  - payout
+- provider: currencycloud
+  apis_io: https://apis.io/providers/currencycloud/
+  crosswalk: crosswalk/currencycloud.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: cybersource
+  apis_io: https://apis.io/providers/cybersource/
+  crosswalk: crosswalk/cybersource.yml
+  concepts:
+  - payout
+- provider: d-local
+  apis_io: https://apis.io/providers/d-local/
+  crosswalk: crosswalk/d-local.yml
+  concepts:
+  - payout
+- provider: dailypay
+  apis_io: https://apis.io/providers/dailypay/
+  crosswalk: crosswalk/dailypay.yml
+  concepts:
+  - payout
+- provider: dlocal
+  apis_io: https://apis.io/providers/dlocal/
+  crosswalk: crosswalk/dlocal.yml
+  concepts:
+  - payout
+- provider: due
+  apis_io: https://apis.io/providers/due/
+  crosswalk: crosswalk/due.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: euronet
+  apis_io: https://apis.io/providers/euronet/
+  crosswalk: crosswalk/euronet.yml
+  concepts:
+  - beneficiary
+- provider: famous
+  apis_io: https://apis.io/providers/famous/
+  crosswalk: crosswalk/famous.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: fin
+  apis_io: https://apis.io/providers/fin/
+  crosswalk: crosswalk/fin.yml
+  concepts:
+  - beneficiary
+- provider: fincra
+  apis_io: https://apis.io/providers/fincra/
+  crosswalk: crosswalk/fincra.yml
+  concepts:
+  - payout
+- provider: finix
+  apis_io: https://apis.io/providers/finix/
+  crosswalk: crosswalk/finix.yml
+  concepts:
+  - payout
+- provider: fintary
+  apis_io: https://apis.io/providers/fintary/
+  crosswalk: crosswalk/fintary.yml
+  concepts:
+  - payout
+- provider: fipto
+  apis_io: https://apis.io/providers/fipto/
+  crosswalk: crosswalk/fipto.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: firstpromoter
+  apis_io: https://apis.io/providers/firstpromoter/
+  crosswalk: crosswalk/firstpromoter.yml
+  concepts:
+  - payout
+- provider: genome
+  apis_io: https://apis.io/providers/genome/
+  crosswalk: crosswalk/genome.yml
+  concepts:
+  - payout
+- provider: hevn-inc
+  apis_io: https://apis.io/providers/hevn-inc/
+  crosswalk: crosswalk/hevn-inc.yml
+  concepts:
+  - payout
+- provider: interchecks
+  apis_io: https://apis.io/providers/interchecks/
+  crosswalk: crosswalk/interchecks.yml
+  concepts:
+  - beneficiary
+- provider: justifi
+  apis_io: https://apis.io/providers/justifi/
+  crosswalk: crosswalk/justifi.yml
+  concepts:
+  - payout
+- provider: korapay
+  apis_io: https://apis.io/providers/korapay/
+  crosswalk: crosswalk/korapay.yml
+  concepts:
+  - payout
+- provider: lean-technologies
+  apis_io: https://apis.io/providers/lean-technologies/
+  crosswalk: crosswalk/lean-technologies.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: lianlian-global
+  apis_io: https://apis.io/providers/lianlian-global/
+  crosswalk: crosswalk/lianlian-global.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: loopay
+  apis_io: https://apis.io/providers/loopay/
+  crosswalk: crosswalk/loopay.yml
+  concepts:
+  - payout
+- provider: mamo
+  apis_io: https://apis.io/providers/mamo/
+  crosswalk: crosswalk/mamo.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: mercoa
+  apis_io: https://apis.io/providers/mercoa/
+  crosswalk: crosswalk/mercoa.yml
+  concepts:
+  - beneficiary
+- provider: moniepoint
+  apis_io: https://apis.io/providers/moniepoint/
+  crosswalk: crosswalk/moniepoint.yml
+  concepts:
+  - payout
+- provider: nala
+  apis_io: https://apis.io/providers/nala/
+  crosswalk: crosswalk/nala.yml
+  concepts:
+  - payout
+- provider: nomba
+  apis_io: https://apis.io/providers/nomba/
+  crosswalk: crosswalk/nomba.yml
+  concepts:
+  - payout
+- provider: now-payments
+  apis_io: https://apis.io/providers/now-payments/
+  crosswalk: crosswalk/now-payments.yml
+  concepts:
+  - payout
+- provider: open-financial
+  apis_io: https://apis.io/providers/open-financial/
+  crosswalk: crosswalk/open-financial.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: papaya-global
+  apis_io: https://apis.io/providers/papaya-global/
+  crosswalk: crosswalk/papaya-global.yml
+  concepts:
+  - beneficiary
+- provider: payabli
+  apis_io: https://apis.io/providers/payabli/
+  crosswalk: crosswalk/payabli.yml
+  concepts:
+  - payout
+- provider: paypal
+  apis_io: https://apis.io/providers/paypal/
+  crosswalk: crosswalk/paypal.yml
+  concepts:
+  - payout
+- provider: payrix
+  apis_io: https://apis.io/providers/payrix/
+  crosswalk: crosswalk/payrix.yml
+  concepts:
+  - payout
+- provider: paystack
+  apis_io: https://apis.io/providers/paystack/
+  crosswalk: crosswalk/paystack.yml
+  concepts:
+  - payout
+- provider: quotapath
+  apis_io: https://apis.io/providers/quotapath/
+  crosswalk: crosswalk/quotapath.yml
+  concepts:
+  - payout
+- provider: ripple-labs
+  apis_io: https://apis.io/providers/ripple-labs/
+  crosswalk: crosswalk/ripple-labs.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: stellar
+  apis_io: https://apis.io/providers/stellar/
+  crosswalk: crosswalk/stellar.yml
+  concepts:
+  - payout
+- provider: tesser
+  apis_io: https://apis.io/providers/tesser/
+  crosswalk: crosswalk/tesser.yml
+  concepts:
+  - beneficiary
+- provider: veem
+  apis_io: https://apis.io/providers/veem/
+  crosswalk: crosswalk/veem.yml
+  concepts:
+  - payout
+- provider: volt-io
+  apis_io: https://apis.io/providers/volt-io/
+  crosswalk: crosswalk/volt-io.yml
+  concepts:
+  - beneficiary
+- provider: vopay
+  apis_io: https://apis.io/providers/vopay/
+  crosswalk: crosswalk/vopay.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: wise
+  apis_io: https://apis.io/providers/wise/
+  crosswalk: crosswalk/wise.yml
+  concepts:
+  - payout
+- provider: worldpay
+  apis_io: https://apis.io/providers/worldpay/
+  crosswalk: crosswalk/worldpay.yml
+  concepts:
+  - payout
+- provider: xendit
+  apis_io: https://apis.io/providers/xendit/
+  crosswalk: crosswalk/xendit.yml
+  concepts:
+  - payout
+- provider: xflow
+  apis_io: https://apis.io/providers/xflow/
+  crosswalk: crosswalk/xflow.yml
+  concepts:
+  - payout
+- provider: zai
+  apis_io: https://apis.io/providers/zai/
+  crosswalk: crosswalk/zai.yml
+  concepts:
+  - payout
+- provider: zero-hash
+  apis_io: https://apis.io/providers/zero-hash/
+  crosswalk: crosswalk/zero-hash.yml
+  concepts:
+  - beneficiary
+  - payout
+- provider: ziina
+  apis_io: https://apis.io/providers/ziina/
+  crosswalk: crosswalk/ziina.yml
+  concepts:
+  - payout

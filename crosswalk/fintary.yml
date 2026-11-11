@@ -1,0 +1,13 @@
+provider: fintary
+apis_io: https://apis.io/providers/fintary/
+context: payouts
+generated: '2026-11-11'
+concepts:
+  payout:
+    path_segment:
+    - payouts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/fintary-open-api-openapi.json#GET /openapi/agents/{id}/payouts
+    - openapi/_original/fintary-open-api-openapi.yml#GET /openapi/agents/{id}/payouts
